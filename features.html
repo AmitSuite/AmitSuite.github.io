@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Features — Amit Automation Suite</title>
+<meta name="description" content="Module by module: tender search on the CPPP portal, tender management, EMD tracking, document generation, submission assistance and financial reconciliation.">
+<meta name="author" content="Amit Jain">
+<meta name="theme-color" content="#1F4E79">
+<link rel="canonical" href="https://amitautomationsuite.github.io/features.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Amit Automation Suite">
+<meta property="og:title" content="Features — Amit Automation Suite">
+<meta property="og:description" content="Tender search, tender management, EMD tracking, document generation, submission assistance and financial reconciliation — module by module.">
+<meta property="og:url" content="https://amitautomationsuite.github.io/features.html">
+<meta property="og:image" content="https://amitautomationsuite.github.io/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Amit Automation Suite — Smarter Tenders. Easier Management.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Features — Amit Automation Suite">
+<meta name="twitter:description" content="Tender search, tender management, EMD tracking, document generation, submission assistance and financial reconciliation.">
+<meta name="twitter:image" content="https://amitautomationsuite.github.io/assets/img/og-image.png">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img class="brand__mark" src="assets/img/icon-512.png" width="34" height="34" alt="" decoding="async">
+        <span class="brand__text">
+          <span class="brand__name">Amit Automation Suite</span>
+          <span class="brand__sub">Tender Automation Platform</span>
+        </span>
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="visually-hidden">Toggle navigation menu</span>
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html" aria-current="page">Features</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+        <div class="nav__cta"><a class="btn btn--primary" href="contact.html">Contact</a></div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero hero--page">
+    <div class="wrap">
+      <div class="hero__inner">
+        <ol class="crumb">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Features</li>
+        </ol>
+        <p class="eyebrow eyebrow--light">Features</p>
+        <h1>Every stage of a tender, handled in one place</h1>
+        <p class="lede">Amit Automation Suite is organised into modules that share a single database,
+          a single set of master lists and a consistent interface. Below is what each module does
+          today, and what is still in development.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+
+      <!-- ===================== Tender Search ===================== -->
+      <div class="section-head">
+        <p class="eyebrow">01 — Tender Search</p>
+        <h2>Find the tenders worth bidding on</h2>
+        <p class="lede">Searching happens in two places: outward, against the Central Public
+          Procurement Portal, and inward, across the tenders you already hold.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="card reveal">
+          <div class="card__head">
+            <h3>CPPP portal search</h3>
+            <span class="tag tag--live">Available</span>
+          </div>
+          <p>The scraper attaches to your own Chrome or Edge browser, opens the portal's advanced
+            search and fills the criteria from a saved search profile. You solve the CAPTCHA and
+            press Search yourself; the scraper then reads the paginated result table and opens each
+            detail page to extract its fields.</p>
+          <ul class="card__list">
+            <li>Search profiles stored in the database and reused run to run</li>
+            <li>Organisation, tender type, value criteria and date conditions all configurable</li>
+            <li>Detail pages read label by label, then mapped onto tender fields</li>
+            <li>Every candidate classified New, Duplicate or Changed before import</li>
+            <li>You choose which rows to import — nothing arrives unreviewed</li>
+          </ul>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <div class="card__head">
+            <h3>Search inside your data</h3>
+            <span class="tag tag--live">Available</span>
+          </div>
+          <p>A single search box runs across the tender record. Frequently used queries are saved as
+            search cards — a card is simply a stored query, so a card and a free-text search always
+            return the same answer for the same criteria.</p>
+          <ul class="card__list">
+            <li>Free-text search across registered tender fields</li>
+            <li>Saved search cards with keywords, date windows and conditions</li>
+            <li>Live result count on each card</li>
+            <li>Per-column filters and multi-sort in every grid</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- ===================== Tender Management ===================== -->
+      <div class="section-head" style="margin-top: clamp(3rem, 6vw, 4.5rem);">
+        <p class="eyebrow">02 — Tender Management</p>
+        <h2>A working record for every tender</h2>
+        <p class="lede">Tenders move through defined stages, and the grid that displays them behaves
+          the way a spreadsheet does — without the fragility of one.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10M8 9l4 4 4-4"/><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg>
+          </span>
+          <h3>Import from Excel</h3>
+          <p>Pick a workbook, pick a worksheet, and map its column headers onto tender fields. Known
+            headers are suggested automatically, so a recurring import format only has to be mapped
+            once.</p>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2.4"/></svg>
+          </span>
+          <h3>Stages and promotion</h3>
+          <p>A tender sits in the Import stage while it is being assessed and is promoted to Master
+            once its EMD payment has succeeded. One rule decides that promotion, so the Import and
+            Master grids can never disagree.</p>
+        </article>
+
+        <article class="card reveal reveal-d2">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11M15 9v11"/></svg>
+          </span>
+          <h3>Grids that stay how you left them</h3>
+          <p>Show, hide, reorder, resize and freeze columns per grid. Layouts are saved
+            automatically and restored on the next launch, per screen.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8z"/></svg>
+          </span>
+          <h3>Rules, not hard-coded logic</h3>
+          <p>Categories are assigned by keyword rules you maintain. Row and field highlighting,
+            days-left thresholds and process statuses are all configurable tables — no values are
+            fixed in the program.</p>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+          <h3>Custom fields</h3>
+          <p>An administrator can add fields to the tender record itself. They behave like every
+            other field — searchable, mappable in imports, usable as document placeholders.</p>
+        </article>
+
+        <article class="card reveal reveal-d2">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6M7 17h8"/></svg>
+          </span>
+          <h3>Dashboard</h3>
+          <p>Total, today's, upcoming and overdue tender counts; EMD committed, refund pending,
+            refunded and held balances; plus zone-wise and stage-wise breakdowns and recent
+            activity.</p>
+        </article>
+      </div>
+
+      <!-- ===================== EMD Tracking ===================== -->
+      <div class="section-head" style="margin-top: clamp(3rem, 6vw, 4.5rem);">
+        <p class="eyebrow">03 — EMD Tracking</p>
+        <h2>Earnest money, from commitment to refund</h2>
+        <p class="lede">EMD is money that leaves the business and is expected to return. The suite
+          tracks both directions and keeps the tender's own EMD figure separate from whatever the
+          bank actually charged.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="card reveal">
+          <div class="card__head">
+            <h3>Assisted EMD payment</h3>
+            <span class="tag tag--live">Available</span>
+          </div>
+          <p>The EMD run attaches to your browser and works alongside you: it watches which page you
+            have reached, fills the parts it is responsible for, reads back what the portal shows,
+            and goes quiet again. Every selector it uses is held in one versioned registry, so a
+            portal change is a configuration update rather than a rewrite.</p>
+          <ul class="card__list">
+            <li>Starts only on an explicit action, never on screen navigation</li>
+            <li>Never fills a CAPTCHA and never clicks Login, Search or Submit behind one</li>
+            <li>Pause, resume and stop at any point during a run</li>
+            <li>Credentials never appear in logs, screenshots or error text</li>
+          </ul>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <div class="card__head">
+            <h3>Receipts and refunds</h3>
+            <span class="tag tag--live">Available</span>
+          </div>
+          <p>Payment receipts are read by the document parser and offered against the tenders they
+            most likely belong to, rated best, average or poor. Refunds are found in bank statements
+            and are proposed the same way.</p>
+          <ul class="card__list">
+            <li>Suggestions are ranked and explained — never linked automatically</li>
+            <li>A receipt can add a missing value but can never blank an existing one</li>
+            <li>A tender stays unmatched until a person presses Link</li>
+            <li>Applied and skipped fields both recorded in the audit log</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="callout reveal" style="margin-top: 1.5rem;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></svg>
+        <div>
+          <p class="mb-0"><strong>Dedicated EMD Management and EMD Refund screens are placeholders in
+            the current release.</strong> EMD figures, balances and zone-wise breakdowns are
+            available today on the Dashboard, and EMD payment, receipt capture and refund matching
+            all work through the modules described above.</p>
+        </div>
+      </div>
+
+      <!-- ===================== Document Generation ===================== -->
+      <div class="section-head" style="margin-top: clamp(3rem, 6vw, 4.5rem);">
+        <p class="eyebrow">04 — Document Generation</p>
+        <h2>Your templates, filled from your data</h2>
+        <p class="lede">The document engine works from Word templates you already use. Placeholders
+          are resolved against the tender, your company profile, the company's bank details and the
+          application's settings.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+          </span>
+          <h3>Placeholder registry</h3>
+          <p>Every tag a template can contain is registered once and mapped to a source field.
+            Templates stay plain Word documents — there is nothing to install into Word.</p>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2.5 2.5L16 8"/><rect x="3" y="4" width="18" height="16" rx="2"/></svg>
+          </span>
+          <h3>Validation before generation</h3>
+          <p>A pre-flight pass marks each tag Resolved, Missing Value or Not In Registry, and shows
+            the resolved text, so a document with a blank in it is caught before it is written.</p>
+        </article>
+
+        <article class="card reveal reveal-d2">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="13" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/></svg>
+          </span>
+          <h3>Batch wizard</h3>
+          <p>Generate across many tenders and many templates in one run. Each tender-and-template
+            combination reports its own status, so a single missing value does not stop the batch.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          </span>
+          <h3>Naming patterns</h3>
+          <p>Output folders and file names are built from patterns you define in settings, so
+            generated paperwork files itself consistently without anyone renaming anything.</p>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M8 11l4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          </span>
+          <h3>Tender document downloader</h3>
+          <p>Downloads a tender's ZIP and PDF documents from the portal through your own browser,
+            moves them into the tender's folder and records the path on the record. It checks first
+            whether the documents are already held or the tender has closed.</p>
+        </article>
+
+        <article class="card reveal reveal-d2">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v5H4zM4 13h16v7H4z"/><path d="M8 6.5h.01M8 16.5h.01"/></svg>
+          </span>
+          <h3>Company and bank details</h3>
+          <p>Company master data and bank accounts are held once and feed both the documents and the
+            reconciliation side, so a change of address or account is made in exactly one place.</p>
+        </article>
+      </div>
+
+      <!-- ===================== Submission helper ===================== -->
+      <div class="section-head" style="margin-top: clamp(3rem, 6vw, 4.5rem);">
+        <p class="eyebrow">05 — Tender Submission Helper</p>
+        <h2>Designed, approved, not yet released</h2>
+        <p class="lede">This module has an approved architecture but no released implementation. It
+          is described here so the intended scope — and its limits — are clear.</p>
+      </div>
+
+      <article class="card reveal">
+        <div class="card__head">
+          <h3>What the submission helper is intended to do</h3>
+          <span class="tag tag--dev">In development</span>
+        </div>
+        <p>The design has the automation prepare the portal session and take responsibility for one
+          action — uploading the technical-cover documents — and then stay in monitor mode until the
+          acknowledgement PDF has been downloaded, renamed against the tender and written back to
+          the record. The bid itself remains the operator's to make.</p>
+        <ul class="card__list">
+          <li>Portal login details held in the company master, encrypted with Windows DPAPI, masked
+            in the interface and filled only on a verified portal login page</li>
+          <li>CAPTCHA, Proceed, digital signature, Freeze and the final Submit remain operator-only
+            actions and are not automated</li>
+          <li>The BOQ and the submission itself stay with the operator</li>
+          <li>Acknowledgement filed automatically against the correct tender</li>
+        </ul>
+        <div class="callout callout--gold" style="margin: 1.35rem 0 0;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 2.4 17.2A2 2 0 0 0 4.1 20h15.8a2 2 0 0 0 1.7-2.8L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+          <p class="mb-0">This module is not part of the current release. Everything above describes
+            an approved design, not shipped behaviour.</p>
+        </div>
+      </article>
+
+      <!-- ===================== Financial operations ===================== -->
+      <div class="section-head" style="margin-top: clamp(3rem, 6vw, 4.5rem);">
+        <p class="eyebrow">06 — Financial Operations</p>
+        <h2>Bank statements, matched to tenders on evidence</h2>
+        <p class="lede">Statements are imported, cleaned of overlap, and compared against tenders
+          using identifiers first and amounts second — because a round EMD figure matches every
+          same-value transfer in an operating account.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="card reveal">
+          <div class="card__head">
+            <h3>Statement import</h3>
+            <span class="tag tag--live">Available</span>
+          </div>
+          <p>Everything bank-specific is a configuration row rather than program logic, so supporting
+            another bank is a new profile, not a new build. PDF columns are located by position from
+            the statement's own header row, which keeps a withdrawal from being read as a deposit.</p>
+          <ul class="card__list">
+            <li>PDF and Excel statements, multiple banks and multiple accounts</li>
+            <li>Consolidated files that switch account part-way through are handled</li>
+            <li>Genuine ambiguity is reported rather than guessed</li>
+            <li>Password-protected statements open from an encrypted stored password, or prompt</li>
+          </ul>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <div class="card__head">
+            <h3>Deduplication and matching</h3>
+            <span class="tag tag--live">Available</span>
+          </div>
+          <p>Downloads overlap by design, so duplicates are removed per transaction rather than per
+            file — reference or UTR first, then a fingerprint, then a near-duplicate check, always
+            scoped to one account.</p>
+          <ul class="card__list">
+            <li>Debits treated as payments, credits as refunds — never confused</li>
+            <li>A refund must carry a reliable identifier before it can be proposed</li>
+            <li>A refund dated before its payment is rejected outright</li>
+            <li>Bank charges are reported alongside the EMD, never merged into it</li>
+            <li>Proposals are marked for review; a link exists only once confirmed</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="grid grid--2" style="margin-top: clamp(1rem, 2vw, 1.4rem);">
+        <article class="card reveal">
+          <div class="card__head">
+            <h3>Excel export</h3>
+            <span class="tag tag--live">Available</span>
+          </div>
+          <p>Export the current view or a whole account to a workbook with separate Summary,
+            Transactions, Reconciliation and Exceptions sheets — the exceptions sheet being the one
+            that shows what still needs a decision.</p>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <div class="card__head">
+            <h3>Indian number formatting</h3>
+            <span class="tag tag--live">Available</span>
+          </div>
+          <p>Money is displayed throughout in Indian digit grouping. Values sent to portal input
+            fields are written as plain digits, so formatting never travels where it should not.</p>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== Supporting capabilities ===================== -->
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Underneath</p>
+        <h2>Supporting capabilities</h2>
+        <p class="lede">Infrastructure the modules above rely on, and which shapes what the suite can
+          be asked to do next.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card card--hover reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.9-3.9"/><path d="M8.5 11h5M11 8.5v5"/></svg>
+          </span>
+          <h3>Document parsing and OCR</h3>
+          <p>Text is taken from a PDF's own text layer when that layer is usable, and the page is
+            rendered and read optically when it is not. Two OCR engines run and are cross-checked
+            against one another, and disagreement on an important field is flagged for a person
+            rather than silently resolved.</p>
+          <ul class="card__list">
+            <li>Reading order rebuilt from page geometry, so labels stay with their values</li>
+            <li>English and Hindi / Devanagari, including mixed-script pages</li>
+            <li>Digits in any script normalised before a parser sees them</li>
+            <li>Nothing to install — both engines ship inside the application</li>
+          </ul>
+        </article>
+
+        <article class="card card--hover reveal reveal-d1">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/></svg>
+          </span>
+          <h3>Google Calendar sync</h3>
+          <p>Optional one-way sync of tender dates into a Google Calendar you choose, so deadlines
+            appear where you already look for them. Event titles, descriptions and reminders are
+            built from patterns you configure.</p>
+          <ul class="card__list">
+            <li>Off until you sign in and choose a calendar — there is no default</li>
+            <li>Only tenders you opt in are ever sent</li>
+            <li>One-way: the calendar never writes back into your records</li>
+            <li>Sign out at any time; the stored token is deleted</li>
+          </ul>
+        </article>
+
+        <article class="card card--hover reveal reveal-d2">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-2.9 1.2V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 7 19.4a1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0-1.2-2.9H1a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 2.6 7a1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A1.7 1.7 0 0 0 8 2.6h.1A2 2 0 1 1 12 1v.1A1.7 1.7 0 0 0 15 2.6"/></svg>
+          </span>
+          <h3>Configuration over code</h3>
+          <p>No company name, bank name, portal label, category, template path or amount is fixed in
+            the program. They all resolve at run time from master lists, settings and rule tables an
+            administrator maintains — which is why the suite can follow a portal or a process change
+            without a new build.</p>
+          <ul class="card__list">
+            <li>Master lists for banks, firms, departments and statuses</li>
+            <li>Settings grouped by area, each with its own defaults</li>
+            <li>A field registry that discovers candidate fields rather than listing them</li>
+            <li>Administrator-only screens behind a password, unlocked once per session</li>
+          </ul>
+        </article>
+
+        <article class="card card--hover reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9.5C7.4 20.4 4 17 4 12V7z"/><path d="M9 12l2 2 4-4"/></svg>
+          </span>
+          <h3>Security model</h3>
+          <p>Secrets are encrypted with Windows DPAPI under your own account, so a copied database
+            file does not open them elsewhere. Sensitive values are kept out of logs, screenshots and
+            exception text, and error messages from external services are stripped before display.</p>
+        </article>
+
+        <article class="card card--hover reveal reveal-d1">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
+          </span>
+          <h3>Interface</h3>
+          <p>Light and dark themes that persist across restarts, a sidebar you can collapse and
+            reorder to match how you work, and right-click actions available directly on grid
+            rows.</p>
+        </article>
+
+        <article class="card card--hover reveal reveal-d2">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v14H4z"/><path d="M4 10h16M8 14h8M8 17h5"/></svg>
+          </span>
+          <h3>Audit log</h3>
+          <p>Changes applied through the automated paths are recorded with the field, the value and
+            the decision taken — including fields an operator was offered and chose not to apply.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <div class="cta__inner">
+        <div class="cta__text">
+          <h2>See how the modules fit together</h2>
+          <p>The How It Works page follows a single tender from the portal listing through to a
+            reconciled refund.</p>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="how-it-works.html">How it works</a>
+          <a class="btn btn--ghost" href="contact.html">Ask a question</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid footer">
+      <div>
+        <a class="footer__brand" href="index.html">
+          <img src="assets/img/icon-512.png" width="36" height="36" alt="" decoding="async" loading="lazy">
+          <span>Amit Automation Suite</span>
+        </a>
+        <p class="footer__tag">Smarter Tenders. Easier Management.</p>
+        <p class="footer__desc">A Windows desktop platform for government tender management,
+          developed by Amit Jain for Aanya Enterprises.</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="contact.html">Contact page</a></li>
+          <li><a href="mailto:123amitjain@gmail.com">123amitjain@gmail.com</a></li>
+          <li><a href="tel:+919210351535">+91 92103 51535</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom footer">
+      <p>&copy; <span data-year>2026</span> Amit Jain. All rights reserved.</p>
+      <ul class="footer__legal">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="disclaimer">
+      <p>Amit Automation Suite is an independent product. It is not affiliated with, endorsed by or
+        connected to the Government of India, the National Informatics Centre, the Central Public
+        Procurement Portal (eprocure.gov.in), the Delhi Development Authority, or Google LLC. All
+        product and organisation names referred to are the property of their respective owners.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

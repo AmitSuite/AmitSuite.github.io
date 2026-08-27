@@ -1,0 +1,15 @@
+{
+  "name": "Amit Automation Suite",
+  "short_name": "AAS",
+  "description": "Smarter Tenders. Easier Management. A Windows desktop platform for government tender management.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#F6F8FB",
+  "theme_color": "#1F4E79",
+  "icons": [
+    { "src": "assets/img/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

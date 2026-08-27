@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Amit Automation Suite</title>
+<meta name="description" content="About Amit Automation Suite: why it was built, the design principles it follows, the technology behind it, system requirements, and who develops and maintains it.">
+<meta name="author" content="Amit Jain">
+<meta name="theme-color" content="#1F4E79">
+<link rel="canonical" href="https://amitautomationsuite.github.io/about.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Amit Automation Suite">
+<meta property="og:title" content="About — Amit Automation Suite">
+<meta property="og:description" content="Why Amit Automation Suite was built, the principles it follows, and the technology behind it.">
+<meta property="og:url" content="https://amitautomationsuite.github.io/about.html">
+<meta property="og:image" content="https://amitautomationsuite.github.io/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Amit Automation Suite — Smarter Tenders. Easier Management.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About — Amit Automation Suite">
+<meta name="twitter:description" content="Why Amit Automation Suite was built, the principles it follows, and the technology behind it.">
+<meta name="twitter:image" content="https://amitautomationsuite.github.io/assets/img/og-image.png">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img class="brand__mark" src="assets/img/icon-512.png" width="34" height="34" alt="" decoding="async">
+        <span class="brand__text">
+          <span class="brand__name">Amit Automation Suite</span>
+          <span class="brand__sub">Tender Automation Platform</span>
+        </span>
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="visually-hidden">Toggle navigation menu</span>
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+        <div class="nav__cta"><a class="btn btn--primary" href="contact.html">Contact</a></div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero hero--page">
+    <div class="wrap">
+      <div class="hero__inner">
+        <ol class="crumb">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">About</li>
+        </ol>
+        <p class="eyebrow eyebrow--light">About</p>
+        <h1>Built from the way the work is actually done</h1>
+        <p class="lede">Amit Automation Suite grew out of a real tender operation and the spreadsheet
+          system that used to run it. Every rule in the product exists because a real document, a
+          real portal page or a real bank statement made it necessary.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid grid--2" style="align-items: start;">
+
+        <div class="reveal">
+          <div class="section-head">
+            <p class="eyebrow">The product</p>
+            <h2>A single application for the tender lifecycle</h2>
+          </div>
+          <div class="stack">
+            <p>Amit Automation Suite is a Windows desktop application for government construction
+              tender management, developed for <strong>Aanya Enterprises</strong>. It covers the
+              lifecycle from discovery through to award and refund: finding tenders on the Central
+              Public Procurement Portal, holding the tender record, generating documents, paying and
+              tracking earnest money deposits, and reconciling that money against the bank.</p>
+            <p>It replaces a long-running Excel and VBA system. The goal was not to change how the
+              work is done — it was to keep the workflow the operator already knew while removing
+              the fragility of a spreadsheet: no broken formulas, no lost column, no second copy of
+              the truth. Records live in a single local database, and every module reads the same
+              one.</p>
+            <p>The suite is delivered one module at a time, verified between phases. Modules that are
+              designed but not yet released are labelled as such throughout this site rather than
+              being described as though they exist.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-d1">
+          <div class="card" style="padding: clamp(1.25rem, 2.5vw, 1.75rem);">
+            <div style="background: #fff; border-radius: var(--r-sm); padding: .5rem; margin-bottom: 1.25rem;">
+              <img src="assets/img/aas-logo.jpg" width="560" height="560"
+                   alt="Amit Automation Suite logo: a stylised letter A with circuit traces and a CPPP portal badge"
+                   loading="lazy" decoding="async" style="border-radius: 6px;">
+            </div>
+            <dl class="spec spec--plain">
+              <dt>Product</dt>
+              <dd>Amit Automation Suite (AAS)</dd>
+              <dt>Tagline</dt>
+              <dd>Smarter Tenders. Easier Management.</dd>
+              <dt>Version</dt>
+              <dd>1.0.0</dd>
+              <dt>Developer</dt>
+              <dd>Amit Jain</dd>
+              <dt>Built for</dt>
+              <dd>Aanya Enterprises</dd>
+              <dt>Platform</dt>
+              <dd>Windows desktop (.NET 8, WPF, SQLite)</dd>
+            </dl>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Principles</p>
+        <h2>The rules the product is built on</h2>
+        <p class="lede">These shape every module, and they are the reason the suite behaves
+          consistently across screens that were built years apart.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card reveal">
+          <h3>Nothing is hard-coded</h3>
+          <p>No company name, bank, portal label, category, template path or amount is written into
+            the program. Everything resolves at run time from master lists, settings and rule tables
+            an administrator maintains — which is why a portal or process change is usually a
+            configuration change, not a new release.</p>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <h3>The operator is in charge</h3>
+          <p>Automation assists a person; it does not stand in for one. The browser belongs to the
+            operator, human checkpoints stay human, and any run can be paused or stopped without
+            leaving a record half-written.</p>
+        </article>
+
+        <article class="card reveal reveal-d2">
+          <h3>Suggest, then wait</h3>
+          <p>Where the suite infers something — which tender a receipt belongs to, which transaction
+            is a refund — it produces a ranked proposal with its reasoning shown, and stops. A
+            record changes only when a person confirms it.</p>
+        </article>
+
+        <article class="card reveal">
+          <h3>Evidence before arithmetic</h3>
+          <p>Matching leads on identifiers and uses amounts only to corroborate, because a round EMD
+            figure matches every same-value transfer in a working account. Facts that cannot be true
+            — a refund dated before its payment — are rejected outright rather than scored.</p>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <h3>Never lose what is already known</h3>
+          <p>An automated step can fill a field that is empty. It can never blank a value the record
+            already holds, and it never overwrites a decision a person made by hand.</p>
+        </article>
+
+        <article class="card reveal reveal-d2">
+          <h3>Tested against real documents</h3>
+          <p>Parsing is developed against genuine receipts and statements, not clean fixtures. Their
+            awkwardness — consolidated multi-account files, collapsed empty columns, unreadable text
+            layers, password protection — is the point of the exercise.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid grid--2" style="align-items: start;">
+        <div class="reveal">
+          <div class="section-head">
+            <p class="eyebrow">Technology</p>
+            <h2>What it is built with</h2>
+            <p class="lede">Deliberately conventional choices, so the application stays fast, starts
+              cleanly and needs nothing installed alongside it.</p>
+          </div>
+          <dl class="spec">
+            <dt>Platform</dt>
+            <dd>.NET 8 (long-term support)</dd>
+            <dt>Interface</dt>
+            <dd>WPF, with light and dark themes</dd>
+            <dt>Database</dt>
+            <dd>SQLite, single local file, write-ahead logging</dd>
+            <dt>Documents</dt>
+            <dd>Open XML for Word generation, ClosedXML for Excel</dd>
+            <dt>PDF and OCR</dt>
+            <dd>PdfPig for text extraction; PaddleOCR and Tesseract cross-validated, both shipped
+              inside the application</dd>
+            <dt>Browser work</dt>
+            <dd>Playwright, attaching to the operator's own Chrome or Edge</dd>
+            <dt>Calendar</dt>
+            <dd>Google Calendar API, optional and opt-in</dd>
+          </dl>
+        </div>
+
+        <div class="reveal reveal-d1">
+          <div class="section-head">
+            <p class="eyebrow">Requirements</p>
+            <h2>What you need to run it</h2>
+            <p class="lede">A standard Windows workstation. There is no server to install and no
+              online account to create.</p>
+          </div>
+          <dl class="spec">
+            <dt>Operating system</dt>
+            <dd>Windows 10 version 2004 (build 19041) or later, 64-bit</dd>
+            <dt>Browser</dt>
+            <dd>Google Chrome or Microsoft Edge, for the portal modules</dd>
+            <dt>Internet</dt>
+            <dd>Needed only for portal work and, if enabled, calendar sync. The rest of the
+              application works offline</dd>
+            <dt>Word</dt>
+            <dd>Not required to generate documents — templates are read and written directly</dd>
+            <dt>OCR setup</dt>
+            <dd>None. Both OCR engines and their language data ship with the application</dd>
+            <dt>Data location</dt>
+            <dd>A single database file in your own Windows user profile</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap wrap--narrow">
+      <div class="section-head section-head--center">
+        <p class="eyebrow">Who builds it</p>
+        <h2>Developed and maintained by Amit Jain</h2>
+      </div>
+      <div class="card reveal text-center" style="align-items: center;">
+        <p class="lede" style="max-width: 60ch; margin-inline: auto;">Amit Automation Suite is
+          designed, built and supported by Amit Jain for Aanya Enterprises. Development is phased and
+          driven by the operation it serves — each module is specified, built and verified against
+          real work before the next one begins.</p>
+        <div class="btn-row" style="justify-content: center; margin-top: 1.5rem;">
+          <a class="btn btn--primary" href="contact.html">Contact</a>
+          <a class="btn btn--ghost" href="features.html">See the features</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid footer">
+      <div>
+        <a class="footer__brand" href="index.html">
+          <img src="assets/img/icon-512.png" width="36" height="36" alt="" decoding="async" loading="lazy">
+          <span>Amit Automation Suite</span>
+        </a>
+        <p class="footer__tag">Smarter Tenders. Easier Management.</p>
+        <p class="footer__desc">A Windows desktop platform for government tender management,
+          developed by Amit Jain for Aanya Enterprises.</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="contact.html">Contact page</a></li>
+          <li><a href="mailto:123amitjain@gmail.com">123amitjain@gmail.com</a></li>
+          <li><a href="tel:+919210351535">+91 92103 51535</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom footer">
+      <p>&copy; <span data-year>2026</span> Amit Jain. All rights reserved.</p>
+      <ul class="footer__legal">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="disclaimer">
+      <p>Amit Automation Suite is an independent product. It is not affiliated with, endorsed by or
+        connected to the Government of India, the National Informatics Centre, the Central Public
+        Procurement Portal (eprocure.gov.in), the Delhi Development Authority, or Google LLC. All
+        product and organisation names referred to are the property of their respective owners.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
