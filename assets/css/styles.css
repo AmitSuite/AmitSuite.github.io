@@ -91,6 +91,12 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
+/* The UA rule for [hidden] is only `display: none`, so ANY author display rule
+   beats it — `.contact-card { display: flex }` was enough to make a hidden
+   element visible again. Everything the site hides at runtime (the WhatsApp
+   elements, until a link is configured) depends on this holding. */
+[hidden] { display: none !important; }
+
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
@@ -1114,4 +1120,559 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
   .hero h1, .hero .lede { color: #000; }
   a { color: #000; text-decoration: underline; }
   .prose h2 { break-after: avoid; }
+  .wa-float, .scroll-progress, .map, .contact-form { display: none !important; }
+}
+
+/* ==========================================================================
+   20. Scroll progress
+   ========================================================================== */
+
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 3px;
+  z-index: 300;
+  pointer-events: none;
+  background: transparent;
+}
+.scroll-progress span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  will-change: transform;
+}
+
+/* ==========================================================================
+   21. WhatsApp
+   ========================================================================== */
+
+:root { --wa: #25D366; --wa-ink: #04331A; --wa-deep: #128C7E; }
+
+.wa-float {
+  position: fixed;
+  right: clamp(.9rem, 3vw, 1.75rem);
+  bottom: clamp(.9rem, 3vw, 1.75rem);
+  z-index: 250;
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .8rem 1.15rem;
+  border-radius: 999px;
+  background: var(--wa);
+  color: var(--wa-ink);
+  font-size: .92rem;
+  font-weight: 650;
+  text-decoration: none;
+  box-shadow: 0 8px 26px rgba(18, 140, 126, .38), 0 2px 6px rgba(4, 51, 26, .25);
+  transition: transform .22s var(--ease), box-shadow .22s var(--ease),
+              background-color .22s var(--ease);
+}
+.wa-float:hover {
+  color: var(--wa-ink);
+  background: #2BE673;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(18, 140, 126, .5), 0 3px 8px rgba(4, 51, 26, .3);
+}
+.wa-float svg { width: 22px; height: 22px; flex: none; }
+.wa-float[hidden] { display: none; }
+
+/* A single slow ring, twice, then it stops — enough to be noticed, not enough
+   to become a distraction while someone is reading. */
+.wa-float::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid var(--wa);
+  animation: waPulse 2.6s var(--ease) 1.2s 2;
+  pointer-events: none;
+}
+@keyframes waPulse {
+  0%   { opacity: .7; transform: scale(1); }
+  70%  { opacity: 0;  transform: scale(1.32); }
+  100% { opacity: 0;  transform: scale(1.32); }
+}
+
+@media (max-width: 560px) {
+  .wa-float { padding: .85rem; }
+  .wa-float__label { display: none; }
+}
+
+.btn--wa { background: var(--wa); color: var(--wa-ink); }
+.btn--wa:hover { background: #2BE673; color: var(--wa-ink); }
+.btn--wa svg { width: 19px; height: 19px; }
+
+.contact-card__icon--wa { background: rgba(37, 211, 102, .14); color: #0F7A45; }
+@media (prefers-color-scheme: dark) { .contact-card__icon--wa { color: #4FE08C; } }
+
+/* ==========================================================================
+   22. Contact form
+   ========================================================================== */
+
+.contact-form {
+  display: grid;
+  gap: 1.05rem;
+  padding: clamp(1.4rem, 3vw, 2.1rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-sm);
+}
+
+.field { display: grid; gap: .4rem; }
+.field--split { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1.05rem; }
+.field--split > * { min-width: 0; }
+
+.field > label {
+  font-size: .875rem;
+  font-weight: 650;
+  color: var(--ink);
+}
+.field .req { color: var(--amber); font-weight: 700; }
+.field__hint { font-size: .8rem; color: var(--ink-3); }
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  padding: .72rem .85rem;
+  font: inherit;
+  font-size: .95rem;
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  transition: border-color .18s var(--ease), box-shadow .18s var(--ease),
+              background-color .18s var(--ease);
+}
+.field textarea { min-height: 148px; resize: vertical; line-height: 1.6; }
+
+.field input:hover, .field textarea:hover, .field select:hover { border-color: var(--blue); }
+.field input:focus, .field textarea:focus, .field select:focus {
+  outline: none;
+  background: var(--surface);
+  border-color: var(--blue);
+  box-shadow: var(--ring);
+}
+.field input::placeholder, .field textarea::placeholder { color: var(--ink-3); opacity: 1; }
+
+.field__error {
+  display: none;
+  align-items: center;
+  gap: .35rem;
+  font-size: .82rem;
+  font-weight: 600;
+  color: #B4232F;
+}
+@media (prefers-color-scheme: dark) { .field__error { color: #FF8A93; } }
+
+.field.is-invalid input,
+.field.is-invalid textarea { border-color: #B4232F; }
+.field.is-invalid .field__error { display: flex; }
+
+.form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  align-items: center;
+  padding-top: .25rem;
+}
+
+.form__status {
+  display: none;
+  gap: .6rem;
+  padding: .85rem 1rem;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--blue);
+  background: var(--surface-2);
+  font-size: .9rem;
+  color: var(--ink-2);
+}
+.form__status.is-shown { display: flex; }
+.form__status svg { width: 18px; height: 18px; flex: none; margin-top: .15rem; color: var(--link); }
+.form__status.is-ok { border-left-color: var(--green); }
+.form__status.is-ok svg { color: var(--green); }
+
+.form__note { font-size: .84rem; color: var(--ink-3); margin: 0; }
+
+/* Honeypot — a bot fills it, a person never sees it. Clipped rather than
+   pushed off-screen with a negative offset, so it can never contribute to the
+   document's scroll width. */
+.hp-field {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================================================
+   23. Map
+   ========================================================================== */
+
+.map {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r);
+  border: 1px solid var(--line);
+  background: var(--bg-alt);
+  box-shadow: var(--shadow-sm);
+  aspect-ratio: 16 / 10;
+}
+@media (max-width: 700px) { .map { aspect-ratio: 4 / 3; } }
+
+.map iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+/* Nothing from Google loads until the visitor asks for it. */
+.map__consent {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: .9rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  text-align: center;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(126, 200, 227, .1), transparent 60%),
+    linear-gradient(155deg, var(--navy-ink), var(--navy) 70%, #1C4666);
+  color: var(--on-dark-2);
+}
+.map__consent h3 { color: #fff; font-size: 1.06rem; margin: 0; }
+/* --on-dark-3 falls to 4.19:1 against the lightest point of this panel's own
+   gradient, so the body text uses the brighter step. */
+.map__consent p { margin: 0; max-width: 44ch; font-size: .88rem; color: var(--on-dark-2); }
+.map__pin {
+  display: grid;
+  place-items: center;
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .22);
+  color: var(--gold-light);
+}
+.map__pin svg { width: 24px; height: 24px; animation: pinDrop 2.8s var(--ease) infinite; }
+@keyframes pinDrop {
+  0%, 62%, 100% { transform: translateY(0); }
+  72%           { transform: translateY(-5px); }
+  84%           { transform: translateY(0); }
+}
+
+.map-block { display: grid; gap: 1.1rem; }
+.map-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.map-meta address {
+  font-style: normal;
+  font-size: .95rem;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+.map-meta address b { display: block; color: var(--ink); font-weight: 650; }
+
+/* ==========================================================================
+   24. Entrance & micro-animations
+   ========================================================================== */
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes floatY {
+  0%, 100% { transform: perspective(1400px) rotateY(-6deg) rotateX(1.5deg) translateY(0); }
+  50%      { transform: perspective(1400px) rotateY(-6deg) rotateX(1.5deg) translateY(-10px); }
+}
+@keyframes sheen {
+  0%   { transform: translateX(-120%) skewX(-18deg); }
+  100% { transform: translateX(320%)  skewX(-18deg); }
+}
+
+/* Hero content arrives in sequence on load — no JS, no observer, so it plays
+   even before main.js has parsed. */
+.js .hero__badge,
+.js .hero h1,
+.js .hero .lede,
+.js .hero .btn-row,
+.js .hero__meta,
+.js .hero .crumb,
+.js .hero .eyebrow,
+.js .hero__visual {
+  animation: riseIn .7s var(--ease) both;
+}
+.js .hero .crumb,
+.js .hero .eyebrow  { animation-delay: .02s; }
+.js .hero__badge    { animation-delay: .06s; }
+.js .hero h1        { animation-delay: .13s; }
+.js .hero .lede     { animation-delay: .21s; }
+.js .hero .btn-row  { animation-delay: .29s; }
+.js .hero__meta     { animation-delay: .37s; }
+.js .hero__visual   { animation-delay: .30s; }
+
+/* A slow highlight travelling once across the hero as it settles. */
+.hero__sheen {
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  width: 26%;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .07), transparent);
+  animation: sheen 2.6s var(--ease) .5s 1 both;
+}
+
+.mock { animation: floatY 7s ease-in-out 1.4s infinite; }
+
+/* Cards: a gold hairline draws in along the top on hover. */
+.card--hover::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 2px;
+  border-radius: var(--r) var(--r) 0 0;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform .35s var(--ease);
+}
+.card--hover:hover::after { transform: scaleX(1); }
+.card--hover .card__icon { transition: transform .3s var(--ease), background-color .3s var(--ease); }
+.card--hover:hover .card__icon { transform: translateY(-2px) scale(1.06); }
+
+/* The arrow in a button nudges forward on hover. */
+.btn svg:last-child { transition: transform .22s var(--ease); }
+.btn:hover svg:last-child { transform: translateX(3px); }
+.btn--wa:hover svg, .wa-float:hover svg { transform: none; }
+
+/* Nav underline grows from the left rather than appearing. */
+.nav__links a::after {
+  content: "";
+  position: absolute;
+  left: .8rem; right: .8rem; bottom: .2rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform .26s var(--ease);
+}
+.nav__links a:hover::after { transform: scaleX(1); }
+.nav__links a[aria-current="page"]::after { transform: scaleX(1); }
+
+/* The eyebrow rule draws itself in when its section is revealed. */
+.reveal .eyebrow::before,
+.reveal.eyebrow::before { transition: width .5s var(--ease) .15s; }
+.js .reveal .eyebrow::before { width: 0; }
+.js .reveal.is-visible .eyebrow::before { width: 24px; }
+
+/* Step numbers settle in with a small pop. */
+.js .step.reveal::before { transform: scale(.88); transition: transform .45s var(--ease); }
+.js .step.reveal.is-visible::before { transform: scale(1); }
+
+/* Reveal picks up a touch of scale so it reads as arriving, not just fading. */
+.js .reveal { transform: translateY(16px) scale(.995); }
+.js .reveal.is-visible { transform: none; }
+
+/* ==========================================================================
+   25. Comments (pre-moderated)
+   ========================================================================== */
+
+.comments { display: grid; gap: 1.1rem; }
+
+.comments__count {
+  display: flex;
+  align-items: baseline;
+  gap: .6rem;
+  font-size: .84rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.comment {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: .95rem;
+  padding: 1.15rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-sm);
+}
+.comment__avatar {
+  display: grid;
+  place-items: center;
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: var(--blue-soft);
+  color: var(--navy);
+  font-size: 1.02rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (prefers-color-scheme: dark) { .comment__avatar { color: var(--sky); } }
+
+.comment__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .35rem .7rem;
+  margin-bottom: .3rem;
+}
+.comment__name { font-weight: 650; color: var(--ink); }
+.comment__org  { font-size: .85rem; color: var(--ink-3); }
+.comment__date { font-size: .8rem; color: var(--ink-3); margin-left: auto; white-space: nowrap; }
+.comment__body { margin: 0; color: var(--ink-2); font-size: .95rem; line-height: 1.68; }
+.comment__body p { margin: 0 0 .6rem; }
+.comment__body p:last-child { margin-bottom: 0; }
+
+.comment__reply {
+  margin-top: .85rem;
+  padding: .8rem .95rem;
+  border-radius: var(--r-sm);
+  border-left: 3px solid var(--gold);
+  background: var(--surface-2);
+}
+.comment__reply .comment__head { margin-bottom: .2rem; }
+.comment__reply .comment__name { font-size: .9rem; }
+.comment__reply p { margin: 0; font-size: .9rem; color: var(--ink-2); line-height: 1.62; }
+
+.comments__empty {
+  padding: 1.6rem 1.4rem;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--r);
+  background: var(--surface-2);
+  text-align: center;
+  color: var(--ink-3);
+  font-size: .93rem;
+}
+
+@media (max-width: 480px) {
+  .comment { grid-template-columns: 1fr; }
+  .comment__avatar { width: 38px; height: 38px; font-size: .92rem; }
+  .comment__date { margin-left: 0; width: 100%; }
+}
+
+/* ==========================================================================
+   26. Second pass of motion
+   ========================================================================== */
+
+/* --- The vertical rule in the steps list draws itself downward ---------- */
+.js .step.reveal:not(:last-child)::after {
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+  transition: transform .75s var(--ease) .18s;
+}
+.js .step.reveal.is-visible:not(:last-child)::after { transform: scaleY(1); }
+
+/* --- Counting numbers in the dashboard illustration -------------------- */
+.mock__card b { transition: color .3s var(--ease); }
+[data-count] { font-variant-numeric: tabular-nums; }
+
+/* --- Card icons tilt very slightly as they lift ------------------------ */
+.card--hover:hover .card__icon { transform: translateY(-2px) scale(1.06) rotate(-4deg); }
+
+/* --- The brand mark reacts to the pointer ------------------------------ */
+.brand__mark { transition: transform .3s var(--ease); }
+.brand:hover .brand__mark { transform: rotate(-6deg) scale(1.06); }
+
+/* --- Footer links slide a touch on hover ------------------------------- */
+.footer ul a {
+  display: inline-block;
+  transition: color .18s var(--ease), transform .18s var(--ease);
+}
+.footer ul a:hover { transform: translateX(3px); }
+
+/* --- Legal tables highlight the row under the pointer ------------------ */
+.prose tbody tr { transition: background-color .18s var(--ease); }
+.prose tbody tr:hover { background: var(--blue-soft); }
+
+/* --- Contact and comment cards lift like feature cards ----------------- */
+.contact-card, .comment {
+  transition: transform .28s var(--ease), box-shadow .28s var(--ease),
+              border-color .28s var(--ease);
+}
+.contact-card:hover, .comment:hover {
+  transform: translateY(-3px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow);
+}
+
+/* --- Form fields settle when focused ----------------------------------- */
+.field > label { transition: color .18s var(--ease); }
+.field:focus-within > label { color: var(--link); }
+
+/* --- The mobile menu drops in instead of appearing --------------------- */
+@media (max-width: 900px) {
+  .js .nav__menu.is-open { animation: menuDrop .26s var(--ease) both; }
+}
+@keyframes menuDrop {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* --- Back to top ------------------------------------------------------- */
+.to-top {
+  position: fixed;
+  right: clamp(.9rem, 3vw, 1.75rem);
+  bottom: calc(clamp(.9rem, 3vw, 1.75rem) + 62px);
+  z-index: 240;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink-2);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(.9);
+  box-shadow: var(--shadow);
+  transition: opacity .28s var(--ease), transform .28s var(--ease),
+              visibility .28s var(--ease), color .2s var(--ease),
+              border-color .2s var(--ease);
+}
+.to-top.is-shown { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { color: var(--link); border-color: var(--link); }
+.to-top svg { width: 19px; height: 19px; }
+
+/* Without a WhatsApp button below it, sit at the normal offset. */
+body:not(.has-wa) .to-top { bottom: clamp(.9rem, 3vw, 1.75rem); }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .step.reveal:not(:last-child)::after { transform: none; transition: none; }
+  .card--hover:hover .card__icon,
+  .brand:hover .brand__mark,
+  .footer ul a:hover,
+  .contact-card:hover, .comment:hover { transform: none; }
+  .js .nav__menu.is-open { animation: none; }
+  .to-top { transition: opacity .01ms; transform: none; }
+  .to-top.is-shown { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .hero__badge, .js .hero h1, .js .hero .lede, .js .hero .btn-row,
+  .js .hero__meta, .js .hero .crumb, .js .hero .eyebrow, .js .hero__visual,
+  .hero__sheen, .mock, .map__pin svg, .wa-float::before {
+    animation: none !important;
+  }
+  .hero__sheen { display: none; }
+  .js .reveal { transform: none; }
+  .card--hover::after, .nav__links a::after { transition: none; }
+  .js .reveal .eyebrow::before { width: 24px; }
+  .js .step.reveal::before { transform: none; }
+  .scroll-progress span { transition: none; }
 }

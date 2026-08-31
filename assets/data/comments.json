@@ -1,0 +1,25 @@
+{
+  "_readme": [
+    "APPROVED COMMENTS ONLY. Nothing here is automatic.",
+    "A visitor's comment arrives in Amit's email. It becomes public only when it",
+    "is added to the 'comments' array below and the change is pushed to GitHub.",
+    "",
+    "Add a new entry at the top or bottom — the site sorts by date, newest first.",
+    "",
+    "  {",
+    "    \"name\":      \"Required. Shown as written.\",",
+    "    \"company\":   \"Optional. Shown next to the name in grey.\",",
+    "    \"date\":      \"Required. ISO format: 2026-08-31\",",
+    "    \"message\":   \"Required. Blank lines become paragraphs.\",",
+    "    \"reply\":     \"Optional. Your public reply, shown indented under it.\",",
+    "    \"replyBy\":   \"Optional. Defaults to 'Amit Jain'.\",",
+    "    \"replyDate\": \"Optional. ISO format.\",",
+    "    \"approved\":  \"Optional. Set false to hide without deleting the entry.\"",
+    "  }",
+    "",
+    "Never paste an email address, phone number or anything else private into a",
+    "comment — every field here is public the moment it is pushed."
+  ],
+
+  "comments": []
+}

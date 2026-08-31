@@ -1,0 +1,3 @@
+GitHub Pages: serve these files as-is, without running them through Jekyll.
+Nothing here needs Jekyll, and skipping it makes deploys faster and avoids
+Jekyll ignoring any file or folder whose name begins with an underscore.
