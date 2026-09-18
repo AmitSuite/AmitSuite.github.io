@@ -188,10 +188,13 @@ layer, `AboutWindow.xaml`, `AmitAutomationSuite.csproj` and the SRS. No
 certification, customer, revenue, accreditation or capability is claimed that
 does not exist.
 
-- Modules **designed but not built** (Tender Submission Helper) are labelled
-  *In development* wherever they appear.
-- Screens that are **placeholders in the shipped app** (EMD Management, EMD
-  Refund, Reports) are not presented as delivered features.
+- As of 18-09-2026 every module on the site is shipped (Submission Helper,
+  Reader with Gemini, Tender Status, Reports, EMD Management included). The one
+  remaining **placeholder in the shipped app** is EMD Refund; it is named as such
+  and never presented as a delivered feature.
+- Claims about automation limits are exact: CAPTCHA, OTP, Freeze and Submit are
+  never automated; the DSC token PIN is typed only behind an opt-in switch,
+  once; Gemini's Send is never pressed by the application.
 - Figures in the hero illustration are **examples**, and are captioned as such.
 
 If a module ships, update `features.html` (status tag) and `index.html` (card)

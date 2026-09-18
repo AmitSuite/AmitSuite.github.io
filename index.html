@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Amit Automation Suite — Tender Management &amp; Automation for Windows</title>
-<meta name="description" content="Windows desktop platform for the government tender lifecycle: tender search, tender management, EMD tracking, document generation and financial reconciliation.">
+<meta name="description" content="Windows desktop platform for the government tender lifecycle: CPPP tender search, AI-assisted NIT reading, tender management, document generation, EMD tracking, portal submission assistance, tender status, reports and bank reconciliation.">
 <meta name="author" content="Amit Jain">
 <meta name="theme-color" content="#1F4E79">
 <link rel="canonical" href="https://amitsuite.github.io/">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Amit Automation Suite">
 <meta property="og:title" content="Amit Automation Suite — Tender Management &amp; Automation for Windows">
-<meta property="og:description" content="A Windows desktop platform for the government tender lifecycle: search, management, EMD tracking, document generation and financial reconciliation. Data stays on your machine.">
+<meta property="og:description" content="A Windows desktop platform for the government tender lifecycle: search, NIT reading, management, documents, EMD, submission assistance, tender status, reports and bank reconciliation. Data stays on your machine.">
 <meta property="og:url" content="https://amitsuite.github.io/">
 <meta property="og:image" content="https://amitsuite.github.io/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -39,10 +39,10 @@
   "applicationCategory": "BusinessApplication",
   "applicationSubCategory": "Tender Management",
   "operatingSystem": "Windows 10 version 2004 (build 19041) or later, 64-bit",
-  "softwareVersion": "1.0.0",
+  "softwareVersion": "1.0.2",
   "url": "https://amitsuite.github.io/",
   "image": "https://amitsuite.github.io/assets/img/og-image.png",
-  "description": "A Windows desktop platform that manages the government tender lifecycle end to end: tender search, tender management, EMD tracking, document generation, tender submission assistance and financial reconciliation. All records are stored in a local SQLite database on the operator's own machine.",
+  "description": "A Windows desktop platform that manages the government tender lifecycle end to end: CPPP tender search, AI-assisted NIT reading, tender management, document generation, EMD tracking, portal submission assistance, tender status, reports and financial reconciliation. All records are stored in a local SQLite database on the operator's own machine.",
   "author":    { "@type": "Person", "name": "Amit Jain", "email": "123amitjain@gmail.com" },
   "publisher": { "@type": "Organization", "name": "Aanya Enterprises" }
 }
@@ -90,12 +90,12 @@
     <div class="wrap">
       <div class="hero__inner">
         <div>
-          <p class="hero__badge"><b>Version 1.0</b> Windows desktop application</p>
+          <p class="hero__badge"><b>Version 1.0.2</b> Windows desktop application</p>
           <h1>Smarter Tenders.<br>Easier Management.</h1>
           <p class="lede">Amit Automation Suite brings the complete government tender lifecycle into one
-            Windows application — searching the portal, managing tender records, tracking EMD,
-            generating documents and reconciling bank activity — without moving between
-            spreadsheets and standalone tools.</p>
+            Windows application — searching the portal, reading the NIT, managing tender records,
+            generating documents, paying and tracking EMD, uploading the bid, checking results and
+            reconciling bank activity — without moving between spreadsheets and standalone tools.</p>
           <div class="btn-row">
             <a class="btn btn--gold" href="features.html">
               Explore the features
@@ -121,15 +121,16 @@
               <div class="mock__side">
                 <div class="mock__group g-data">DATA</div>
                 <div class="mock__nav t-data is-active"><em>&#128202;</em> Dashboard</div>
-                <div class="mock__nav t-data"><em>&#128269;</em> Search</div>
-                <div class="mock__nav t-data"><em>&#128203;</em> Tender Master</div>
+                <div class="mock__nav t-data"><em>&#128450;</em> Workspace</div>
+                <div class="mock__nav t-data"><em>&#128197;</em> Tender Calendar</div>
+                <div class="mock__nav t-data"><em>&#128203;</em> Tender Analysis</div>
                 <div class="mock__nav t-data"><em>&#128194;</em> Master Data</div>
-                <div class="mock__nav t-data"><em>&#128229;</em> Import Data</div>
                 <div class="mock__group g-auto">AUTOMATION</div>
-                <div class="mock__nav t-auto"><em>&#128176;</em> Process EMD</div>
-                <div class="mock__nav t-auto"><em>&#128221;</em> Documents</div>
-                <div class="mock__nav t-auto"><em>&#128270;</em> Parser</div>
                 <div class="mock__nav t-auto"><em>&#127760;</em> CPPP Scraper</div>
+                <div class="mock__nav t-auto"><em>&#128214;</em> Reader</div>
+                <div class="mock__nav t-auto"><em>&#128176;</em> Process EMD</div>
+                <div class="mock__nav t-auto"><em>&#128228;</em> Submission Helper</div>
+                <div class="mock__nav t-auto"><em>&#127937;</em> Tender Status</div>
                 <div class="mock__group g-rep">REPORTS</div>
                 <div class="mock__nav t-rep"><em>&#128202;</em> Reports</div>
                 <div class="mock__group g-set">SETTINGS</div>
@@ -172,8 +173,8 @@
       <ul class="strip__list">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg> Built on .NET 8, WPF and SQLite</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Sensitive values encrypted with Windows DPAPI</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v10M8 9l4 4 4-4"/><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg> Excel import and export</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Light and dark themes</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v10M8 9l4 4 4-4"/><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg> One Setup file — updates keep your data</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Light and dark themes, keyboard shortcuts you choose</li>
       </ul>
     </div>
   </div>
@@ -183,10 +184,10 @@
     <div class="wrap">
       <div class="section-head section-head--center">
         <p class="eyebrow">One platform</p>
-        <h2>Six areas of the tender lifecycle, in a single application</h2>
+        <h2>Nine areas of the tender lifecycle, in a single application</h2>
         <p class="lede">Every module shares one database, one set of master lists and one interface.
-          Data entered once in Import is the same data the document engine, the EMD screens and the
-          reconciliation view all read.</p>
+          A tender found by the scraper is the same record the Reader, the document engine, the EMD
+          screens, the Submission Helper and the reports all read.</p>
       </div>
 
       <div class="grid grid--3">
@@ -197,12 +198,12 @@
           </span>
           <h3>Tender Search</h3>
           <p>Run advanced searches on the Central Public Procurement Portal from saved search
-            profiles, read the result pages and detail pages, and review every row before anything
-            enters your database.</p>
+            profiles, read the result and detail pages, and review every row before anything
+            enters your database. A live log shows each step as it runs.</p>
           <ul class="card__list">
             <li>Reusable CPPP search profiles</li>
             <li>Automatic New / Duplicate / Changed classification</li>
-            <li>Universal search and saved search cards inside the app</li>
+            <li>Universal search and saved search cards as filters on every grid</li>
           </ul>
         </article>
 
@@ -211,27 +212,28 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2.4"/></svg>
           </span>
           <h3>Tender Management</h3>
-          <p>Import tenders from Excel with column mapping, then work them through the Import and
-            Master stages in an Excel-like grid that remembers exactly how you left it.</p>
+          <p>Import tenders from Excel or the scraper, then work them through Tender Analysis and
+            Master Data in an Excel-like grid. The Workspace lists each tender's next step and the
+            Tender Calendar shows every stored date with reminders.</p>
           <ul class="card__list">
-            <li>Show, hide, reorder, resize and freeze columns — layout persists</li>
-            <li>Category, row-highlight and days-left rules you configure</li>
-            <li>Administrator-created custom fields on every tender</li>
+            <li>Show, hide, reorder, resize, filter and freeze columns — layout persists</li>
+            <li>Category, row-highlight, days-left and reminder rules you configure</li>
+            <li>Tenders with no work are archived automatically and can be restored</li>
           </ul>
         </article>
 
         <article class="card card--hover reveal reveal-d2">
           <span class="card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="13" rx="2"/><path d="M2.5 10h19"/><path d="M17 15h2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M4 19a2 2 0 0 1 2-2h12"/><path d="M9 7h6M9 11h4"/></svg>
           </span>
-          <h3>EMD Tracking</h3>
-          <p>Follow earnest money from commitment through payment to refund, with committed,
-            pending, refunded and held balances summarised on the dashboard and broken down by zone
-            and by stage.</p>
+          <h3>Reader — NIT analysis with AI</h3>
+          <p>Open a tender's NIT in the Reader and have Google Gemini read it in your own browser:
+            the documents to upload, the rates and the other conditions come back as a checklist
+            on the tender, with the page each item was found on.</p>
           <ul class="card__list">
-            <li>Assisted EMD payment on the portal, with the operator in control</li>
-            <li>Payment receipts read automatically and linked on your confirmation</li>
-            <li>Refunds detected from bank statements, never applied silently</li>
+            <li>You press Send in Gemini yourself — nothing is sent for you</li>
+            <li>Each requirement is matched to your named company documents</li>
+            <li>Cover list read from the public tender page for the upload</li>
           </ul>
         </article>
 
@@ -246,29 +248,56 @@
           <ul class="card__list">
             <li>Batch generation across many tenders and templates at once</li>
             <li>Pre-flight check marks each tag Resolved, Missing or Unregistered</li>
-            <li>Output folders and file names follow patterns you define</li>
+            <li>Template Builder, naming patterns and optional PDF output</li>
           </ul>
         </article>
 
         <article class="card card--hover reveal reveal-d1">
-          <div class="card__head">
-            <span class="card__icon card__icon--gold" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6"/><path d="M6 12l6-6 6 6"/><path d="M4 20h16"/></svg>
-            </span>
-            <span class="tag tag--dev">In development</span>
-          </div>
-          <h3>Tender Submission Helper</h3>
-          <p>A designed module that will assist the bid-submission run: preparing the portal session
-            and uploading technical-cover documents, then staying in monitor mode until the
-            acknowledgement is downloaded and recorded.</p>
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="13" rx="2"/><path d="M2.5 10h19"/><path d="M17 15h2"/></svg>
+          </span>
+          <h3>EMD Tracking</h3>
+          <p>Follow earnest money from commitment through payment to refund, with committed,
+            pending, refunded and held balances on the dashboard and every tender's EMD in one
+            EMD Management list.</p>
           <ul class="card__list">
-            <li>CAPTCHA, DSC, Freeze and final Submit stay operator-only</li>
-            <li>Acknowledgement filed against the right tender automatically</li>
-            <li>Architecture approved; not yet released</li>
+            <li>Assisted EMD payment on the portal, with the operator in control</li>
+            <li>Payment receipts read automatically and linked on your confirmation</li>
+            <li>Refunds detected from bank statements, never applied silently</li>
           </ul>
         </article>
 
         <article class="card card--hover reveal reveal-d2">
+          <span class="card__icon card__icon--gold" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6"/><path d="M6 12l6-6 6 6"/><path d="M4 20h16"/></svg>
+          </span>
+          <h3>Tender Submission Helper</h3>
+          <p>Prepares the portal session, matches your documents to the NIT's upload list and
+            uploads them to the right technical covers — one planned step at a time, each switched
+            on by you — with evidence saved in the tender's folder.</p>
+          <ul class="card__list">
+            <li>CAPTCHA, Freeze and the final Submit are never automated</li>
+            <li>Every upload slot shows what was matched and why</li>
+            <li>Token PIN used only if you switch that on — once, never retried</li>
+          </ul>
+        </article>
+
+        <article class="card card--hover reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V4"/><path d="M4 4h12l-2 4 2 4H4"/></svg>
+          </span>
+          <h3>Tender Status and Reports</h3>
+          <p>Check the outcome of tenders you bid on and of any closed tender, read the portal's
+            BOQ comparative chart for L1, and keep the results in a report store with Excel and
+            printable output.</p>
+          <ul class="card__list">
+            <li>Signed-in or public check — one CAPTCHA per division, typed by you</li>
+            <li>L1 company, rate and amount; ties recorded as a lucky draw</li>
+            <li>Result reports with charts, exported to Excel or PDF</li>
+          </ul>
+        </article>
+
+        <article class="card card--hover reveal reveal-d1">
           <span class="card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6"/><path d="M5 10v9M19 10v9M9 10v9M15 10v9M3 20h18"/></svg>
           </span>
@@ -280,6 +309,21 @@
             <li>Password-protected statements supported, passwords never stored in plain text</li>
             <li>Gateway charges reported separately, never merged into an EMD amount</li>
             <li>Excel export with summary, transaction, reconciliation and exception sheets</li>
+          </ul>
+        </article>
+
+        <article class="card card--hover reveal reveal-d2">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M8 11l4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          </span>
+          <h3>Setup and Updates</h3>
+          <p>One Setup file installs the application with everything it needs to run. The same
+            file updates an existing installation in place, after a verified, dated backup of your
+            data, and keeps the previous version until the next update succeeds.</p>
+          <ul class="card__list">
+            <li>Updates never touch your database, files or backups</li>
+            <li>Bundled data is only ever brought in when you choose it</li>
+            <li>Uninstall removes the program and leaves your data</li>
           </ul>
         </article>
 
@@ -311,18 +355,18 @@
         </div>
         <div class="card reveal reveal-d1">
           <span class="step__module">Stage 02</span>
-          <h3>Organise</h3>
-          <p>Import, categorise and work the tender through the Import and Master stages.</p>
+          <h3>Read and prepare</h3>
+          <p>Read the NIT with AI, download the documents, generate your paperwork and pay the EMD.</p>
         </div>
         <div class="card reveal reveal-d2">
           <span class="step__module">Stage 03</span>
-          <h3>Prepare</h3>
-          <p>Download tender documents, generate your paperwork and pay the EMD.</p>
+          <h3>Submit</h3>
+          <p>Upload the technical covers with the helper, then freeze and submit the bid yourself.</p>
         </div>
         <div class="card reveal reveal-d3">
           <span class="step__module">Stage 04</span>
-          <h3>Reconcile</h3>
-          <p>Read receipts and bank statements, then confirm the matches they propose.</p>
+          <h3>Track and reconcile</h3>
+          <p>Check the result and L1, read receipts and bank statements, and confirm the matches.</p>
         </div>
       </div>
 
@@ -342,7 +386,9 @@
         <h2>Your data stays on your machine</h2>
         <p class="lede" style="max-width: 62ch;">Amit Automation Suite has no product server and no
           online account. It runs entirely on the operator's own Windows PC, and the automation is
-          built to assist a person rather than replace them.</p>
+          built to assist a person rather than replace them. Data leaves the PC only when you send
+          it yourself — to the portal in your browser, to Google Calendar if you switch it on, or
+          to Gemini when you press Send.</p>
 
         <div class="panel__grid">
           <div class="panel__item">

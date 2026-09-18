@@ -88,7 +88,7 @@
     <div class="wrap wrap--narrow">
       <div class="section-head">
         <p class="eyebrow">The sequence</p>
-        <h2>Eight stages, in the order the work happens</h2>
+        <h2>Eleven stages, in the order the work happens</h2>
         <p class="lede">Nothing below has to be done in isolation, and nothing has to be entered
           twice. Each stage writes to the same tender record the next one reads.</p>
       </div>
@@ -124,7 +124,26 @@
               highlighted by your own conditions — approaching dates, missing values, whatever
               matters to you.</p>
             <p>A tender you have manually categorised keeps that decision. Regenerating categories
-              never overwrites a human choice.</p>
+              never overwrites a human choice. The Workspace then lists each tender you are working
+              on with its next step, and the Tender Calendar shows every stored date with the
+              reminders you have set.</p>
+          </div>
+        </div>
+
+        <div class="step reveal">
+          <div class="step__body">
+            <span class="step__module">Reader</span>
+            <h3>Read the NIT with AI and build the document list</h3>
+            <p>Open the tender in the Reader and choose a prompt — the documents to upload, the
+              rates, or the other conditions. The Reader opens Google Gemini in a browser profile
+              kept for this purpose, attaches the NIT and fills the prompt. You press Send. The
+              reply comes back as a checklist on the tender, each item with the page it was found
+              on, and each requirement is matched to one of your named company documents.</p>
+            <div class="step__note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+              <span>Nothing is sent to Gemini until you press Send, and a reply is saved only after
+                it is checked against the tender's NIT number.</span>
+            </div>
           </div>
         </div>
 
@@ -165,8 +184,26 @@
               in exactly the same state.</p>
             <div class="step__note">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-              <span>One-time passwords and digital signatures are never handled by the automation,
-                and credentials never appear in a log, a screenshot or an error message.</span>
+              <span>One-time passwords are never handled by the automation, and credentials never
+                appear in a log, a screenshot or an error message.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="step reveal">
+          <div class="step__body">
+            <span class="step__module">Submission Helper</span>
+            <h3>Upload the covers, then freeze and submit yourself</h3>
+            <p>Before the run, a plan dialog shows every step the helper may take — sign-in,
+              shortlisting the tender, Proceed, terms, bidder details, the EMD payment form, the
+              cover uploads — each switched off until you switch it on. The helper matches the
+              portal's requested documents to your files slot by slot, shows what it matched and
+              why, and fills the portal's upload utility for you to sign. Evidence of the run is
+              kept in the tender's folder.</p>
+            <div class="step__note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 2.4 17.2A2 2 0 0 0 4.1 20h15.8a2 2 0 0 0 1.7-2.8L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+              <span>Freeze and the final Submit are never automated. The DSC token PIN is typed only
+                if you switch that on — once, never retried.</span>
             </div>
           </div>
         </div>
@@ -214,11 +251,25 @@
 
         <div class="step reveal">
           <div class="step__body">
+            <span class="step__module">Tender Status &amp; Reports</span>
+            <h3>Find out who won, and keep the record</h3>
+            <p>Once a tender closes, Tender Status fetches the outcome — signed in for your own bids,
+              or through the portal's public status search for any closed tender, one CAPTCHA per
+              division typed by you. The BOQ comparative chart is read for the L1 company, rate and
+              amount, ties are recorded as a lucky draw, and the files are filed in the tender's
+              folder. Reports then show participation, outcome and rank from your own data, on
+              screen, in Excel or as PDF.</p>
+          </div>
+        </div>
+
+        <div class="step reveal">
+          <div class="step__body">
             <span class="step__module">Dashboard &amp; Calendar</span>
             <h3>Stay ahead of the dates</h3>
             <p>The dashboard carries the running picture: total, today's, upcoming and overdue
               tenders, EMD committed, refund pending, refunded and held, and the same figures broken
-              down by zone and by stage.</p>
+              down by zone and by stage. Reminder cards you define appear in a bar when the
+              application starts and on the Tender Calendar.</p>
             <p>If you connect Google Calendar, the tenders you opt in have their dates written into
               a calendar you choose, with the titles, descriptions and reminders your configured
               patterns produce. The sync is one-way — your records are the source of truth, and the
@@ -254,8 +305,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 5.1A9 9 0 0 1 21 12c-.5 1-1.2 2-2 2.8M6.3 6.4A9 9 0 0 0 3 12a9 9 0 0 0 13 7"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
           </span>
           <h3>Human checkpoints stay human</h3>
-          <p>CAPTCHA, one-time passwords, digital signatures and the final submission are never
-            automated, in any module.</p>
+          <p>CAPTCHA, one-time passwords, Freeze and the final submission are never automated, in
+            any module. Sending a prompt to Gemini is your click, not the application's.</p>
         </article>
 
         <article class="card reveal reveal-d2">
@@ -284,8 +335,8 @@
       <div class="cta__inner">
         <div class="cta__text">
           <h2>Want the detail behind each stage?</h2>
-          <p>The Features page breaks every module down, including what is available today and what
-            is still in development.</p>
+          <p>The Features page breaks every module down — what it does, and where the operator's own
+            click is always required.</p>
         </div>
         <div class="btn-row">
           <a class="btn btn--primary" href="features.html">Browse the features</a>

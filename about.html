@@ -104,9 +104,10 @@
               the fragility of a spreadsheet: no broken formulas, no lost column, no second copy of
               the truth. Records live in a single local database, and every module reads the same
               one.</p>
-            <p>The suite is delivered one module at a time, verified between phases. Modules that are
-              designed but not yet released are labelled as such throughout this site rather than
-              being described as though they exist.</p>
+            <p>The suite is delivered one module at a time, verified between phases. Today that covers
+              portal search, AI-assisted NIT reading, documents, EMD, the submission run, tender
+              status, reports and bank reconciliation. The one screen that is still a placeholder
+              (EMD Refund) is labelled as such rather than described as though it exists.</p>
           </div>
         </div>
 
@@ -123,7 +124,7 @@
               <dt>Tagline</dt>
               <dd>Smarter Tenders. Easier Management.</dd>
               <dt>Version</dt>
-              <dd>1.0.0</dd>
+              <dd>1.0.2</dd>
               <dt>Developer</dt>
               <dd>Amit Jain</dd>
               <dt>Built for</dt>
@@ -217,8 +218,14 @@
               inside the application</dd>
             <dt>Browser work</dt>
             <dd>Playwright, attaching to the operator's own Chrome or Edge</dd>
+            <dt>AI reading</dt>
+            <dd>Google Gemini, in a browser profile the application keeps — you press Send</dd>
+            <dt>Portal upload utility</dt>
+            <dd>Java Access Bridge, through a small 32-bit helper shipped with the application</dd>
             <dt>Calendar</dt>
             <dd>Google Calendar API, optional and opt-in</dd>
+            <dt>Installation</dt>
+            <dd>One Setup file with the .NET runtime inside; updates back up your data first</dd>
           </dl>
         </div>
 
@@ -235,12 +242,17 @@
             <dt>Browser</dt>
             <dd>Google Chrome or Microsoft Edge, for the portal modules</dd>
             <dt>Internet</dt>
-            <dd>Needed only for portal work and, if enabled, calendar sync. The rest of the
-              application works offline</dd>
+            <dd>Needed only for portal work, the Reader's AI analysis and, if enabled, calendar
+              sync. The rest of the application works offline</dd>
+            <dt>Java</dt>
+            <dd>Java 8 (32-bit) with the Java Access Bridge — only for the portal's DSC sign-in and
+              upload utility, which are Java programs of the portal itself</dd>
             <dt>Word</dt>
-            <dd>Not required to generate documents — templates are read and written directly</dd>
+            <dd>Not required to generate documents — templates are read and written directly.
+              Microsoft Word is used only if you want a PDF copy alongside</dd>
             <dt>OCR setup</dt>
-            <dd>None. Both OCR engines and their language data ship with the application</dd>
+            <dd>None. Both OCR engines, their language data and the Microsoft Visual C++ runtime
+              they need ship with the application</dd>
             <dt>Data location</dt>
             <dd>A single database file in your own Windows user profile</dd>
           </dl>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Features — Amit Automation Suite</title>
-<meta name="description" content="Module by module: tender search on the CPPP portal, tender management, EMD tracking, document generation, submission assistance and financial reconciliation.">
+<meta name="description" content="Module by module: CPPP tender search, AI-assisted NIT reading, tender management, document generation, EMD tracking, portal submission assistance, tender status and reports, financial reconciliation, and setup with backed-up updates.">
 <meta name="author" content="Amit Jain">
 <meta name="theme-color" content="#1F4E79">
 <link rel="canonical" href="https://amitsuite.github.io/features.html">
@@ -79,7 +79,7 @@
         <h1>Every stage of a tender, handled in one place</h1>
         <p class="lede">Amit Automation Suite is organised into modules that share a single database,
           a single set of master lists and a consistent interface. Below is what each module does
-          today, and what is still in development.</p>
+          today — and the one screen that is still a placeholder.</p>
       </div>
     </div>
   </section>
@@ -142,6 +142,16 @@
       <div class="grid grid--3">
         <article class="card reveal">
           <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h8M8 16h5"/></svg>
+          </span>
+          <h3>Workspace and Tender Calendar</h3>
+          <p>The Workspace queues the tenders you are working on and shows each one's next step —
+            read the NIT, download, generate, pay, submit. The Tender Calendar lays every stored
+            date out by month with reminders you can act on, and jumps straight to the tender.</p>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <span class="card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10M8 9l4 4 4-4"/><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg>
           </span>
           <h3>Import from Excel</h3>
@@ -154,10 +164,10 @@
           <span class="card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2.4"/></svg>
           </span>
-          <h3>Stages and promotion</h3>
-          <p>A tender sits in the Import stage while it is being assessed and is promoted to Master
-            once its EMD payment has succeeded. One rule decides that promotion, so the Import and
-            Master grids can never disagree.</p>
+          <h3>Stages, promotion and archive</h3>
+          <p>A tender sits in Tender Analysis while it is being assessed and is promoted to Master
+            Data once its EMD payment has succeeded. One rule decides that promotion. Tenders that
+            close with no work done on them are archived automatically and can be restored.</p>
         </article>
 
         <article class="card reveal reveal-d2">
@@ -165,8 +175,9 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11M15 9v11"/></svg>
           </span>
           <h3>Grids that stay how you left them</h3>
-          <p>Show, hide, reorder, resize and freeze columns per grid. Layouts are saved
-            automatically and restored on the next launch, per screen.</p>
+          <p>Show, hide, reorder, resize, filter, sort and freeze columns per grid; expand any grid
+            to full screen with one key. Layouts are saved automatically and restored on the next
+            launch, per screen, and the Excel-like look (lines, alignment, font) is yours to set.</p>
         </article>
 
         <article class="card reveal">
@@ -246,10 +257,11 @@
       <div class="callout reveal" style="margin-top: 1.5rem;">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></svg>
         <div>
-          <p class="mb-0"><strong>Dedicated EMD Management and EMD Refund screens are placeholders in
-            the current release.</strong> EMD figures, balances and zone-wise breakdowns are
-            available today on the Dashboard, and EMD payment, receipt capture and refund matching
-            all work through the modules described above.</p>
+          <p class="mb-0"><strong>EMD Management</strong> lists every tender's EMD in one place —
+            required amount, payment, status, transaction, making date and bank, refund — with the
+            same search, filters and right-click actions as the tender grids. <strong>The dedicated
+            EMD Refund screen is still a placeholder</strong>; refund matching works through the
+            Financial Operations module described below.</p>
         </div>
       </div>
 
@@ -294,9 +306,10 @@
           <span class="card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
           </span>
-          <h3>Naming patterns</h3>
-          <p>Output folders and file names are built from patterns you define in settings, so
-            generated paperwork files itself consistently without anyone renaming anything.</p>
+          <h3>Template Builder and naming patterns</h3>
+          <p>Build and edit templates inside the application, preview a filled copy, and let output
+            folders and file names follow patterns you define — with an optional PDF alongside the
+            Word file when Microsoft Word is installed.</p>
         </article>
 
         <article class="card reveal reveal-d1">
@@ -319,41 +332,128 @@
         </article>
       </div>
 
+      <!-- ===================== Reader ===================== -->
+      <div class="section-head" style="margin-top: clamp(3rem, 6vw, 4.5rem);">
+        <p class="eyebrow">05 — Reader</p>
+        <h2>Read the NIT once, with AI, and keep the answers on the tender</h2>
+        <p class="lede">A tender's NIT runs to dozens of pages. The Reader has Google Gemini read it
+          in your own browser and turns the reply into a checklist on the tender record — with the
+          page each item came from, so you can verify it.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="card reveal">
+          <div class="card__head">
+            <h3>AI tender analysis</h3>
+            <span class="tag tag--live">Available</span>
+          </div>
+          <p>Three prompts — the documents to upload, the rates, and the other conditions — are
+            sent from the tender's own NIT. The Reader opens gemini.google.com in a Chrome profile
+            the application keeps for this purpose, attaches the NIT and fills the prompt. You read
+            it and press Send; the reply is imported and checked against the NIT number before
+            anything is saved.</p>
+          <ul class="card__list">
+            <li>Send is never pressed for you, and the reply is never applied without the check</li>
+            <li>Requirements carry their page and section, so each one can be verified</li>
+            <li>Only the NIT's Technical / Price Bid list counts as the upload list</li>
+            <li>Sign in to Gemini once in that browser; the application never sees your Google password</li>
+          </ul>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <div class="card__head">
+            <h3>Documents matched by name</h3>
+            <span class="tag tag--live">Available</span>
+          </div>
+          <p>Your standing documents — registrations, certificates, affidavits — are named once,
+            each with its file and expiry date. Every requirement the Reader finds is matched to a
+            named document, and the cover list is read from the public tender page so the upload
+            plan is packet-first.</p>
+          <ul class="card__list">
+            <li>Keyword matching with the reason shown; your own picks are never overridden</li>
+            <li>Expiring documents raise a reminder in the application and, optionally, in Google Calendar</li>
+            <li>Affidavits and undertakings generated from your letterhead frame</li>
+          </ul>
+        </article>
+      </div>
+
       <!-- ===================== Submission helper ===================== -->
       <div class="section-head" style="margin-top: clamp(3rem, 6vw, 4.5rem);">
-        <p class="eyebrow">05 — Tender Submission Helper</p>
-        <h2>Designed, approved, not yet released</h2>
-        <p class="lede">This module has an approved architecture but no released implementation. It
-          is described here so the intended scope — and its limits — are clear.</p>
+        <p class="eyebrow">06 — Tender Submission Helper</p>
+        <h2>The upload run, one planned step at a time</h2>
+        <p class="lede">The helper prepares the portal session and takes responsibility for the
+          uploads. Everything that commits the bid — the digital signature, Freeze, Submit — stays
+          with you.</p>
       </div>
 
       <article class="card reveal">
         <div class="card__head">
-          <h3>What the submission helper is intended to do</h3>
-          <span class="tag tag--dev">In development</span>
+          <h3>What the submission helper does</h3>
+          <span class="tag tag--live">Available</span>
         </div>
-        <p>The design has the automation prepare the portal session and take responsibility for one
-          action — uploading the technical-cover documents — and then stay in monitor mode until the
-          acknowledgement PDF has been downloaded, renamed against the tender and written back to
-          the record. The bid itself remains the operator's to make.</p>
+        <p>From the tender's requirement list, the helper matches each item to your documents,
+          stages the files for the tender, opens the portal in your browser and fills the technical
+          covers slot by slot. Each step of the plan is switched off until you switch it on, and the
+          plan itself is shown before the run starts. Evidence of what was uploaded where is kept in
+          the tender's folder.</p>
         <ul class="card__list">
-          <li>Portal login details held in the company master, encrypted with Windows DPAPI, masked
-            in the interface and filled only on a verified portal login page</li>
-          <li>CAPTCHA, Proceed, digital signature, Freeze and the final Submit remain operator-only
-            actions and are not automated</li>
-          <li>The BOQ and the submission itself stay with the operator</li>
-          <li>Acknowledgement filed automatically against the correct tender</li>
+          <li>Portal user ID and password held encrypted with Windows DPAPI, masked in the interface
+            and filled only on a verified portal sign-in page</li>
+          <li>Every slot shows the matched document and the reason; a second pass fills what the
+            first could not</li>
+          <li>The EMD payment form is filled from your IFMIS receipt and the portal's upload utility is
+            filled row by row — you check both before anything is signed</li>
+          <li>DSC token sign-in is assisted: the token PIN is stored encrypted and typed only if you
+            switch that on, once, never retried. CAPTCHA, Freeze and the final Submit are never
+            automated</li>
+          <li>The BOQ and the bid itself stay with the operator</li>
         </ul>
-        <div class="callout callout--gold" style="margin: 1.35rem 0 0;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 2.4 17.2A2 2 0 0 0 4.1 20h15.8a2 2 0 0 0 1.7-2.8L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
-          <p class="mb-0">This module is not part of the current release. Everything above describes
-            an approved design, not shipped behaviour.</p>
-        </div>
       </article>
+
+      <!-- ===================== Tender Status & Reports ===================== -->
+      <div class="section-head" style="margin-top: clamp(3rem, 6vw, 4.5rem);">
+        <p class="eyebrow">07 — Tender Status and Reports</p>
+        <h2>Who won, at what rate — and how you are doing</h2>
+        <p class="lede">Once a tender closes, the portal has the answer. The suite fetches it, reads
+          the BOQ comparative chart and keeps the result on the record, so reports come from your
+          own data rather than from memory.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="card reveal">
+          <div class="card__head">
+            <h3>Tender Status</h3>
+            <span class="tag tag--live">Available</span>
+          </div>
+          <p>Two routes: signed in, for the tenders you bid on; or the portal's public status
+            search, for any closed tender. Checks are grouped by division so you type one CAPTCHA
+            per division — the application never presses that Search for you.</p>
+          <ul class="card__list">
+            <li>L1 company, rate and amount read from the BOQ comparative chart</li>
+            <li>Ties recorded as a lucky draw, with draw date and award editable</li>
+            <li>Status files saved in the tender's folder; the chart opens from the grid</li>
+            <li>Missing department chain and publish date filled from the saved tender link, never guessed</li>
+          </ul>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <div class="card__head">
+            <h3>Reports</h3>
+            <span class="tag tag--live">Available</span>
+          </div>
+          <p>A result store built from the saved charts: participation, outcome, your rank, L1 and
+            the estimate. Reports open on screen, print to PDF and export to Excel with charts.</p>
+          <ul class="card__list">
+            <li>Dense portal ranks, estimate-mismatch rule, per-tender detail</li>
+            <li>Tender detail, BOQ chart and technical summary one click away</li>
+            <li>Viewing a report never changes a record</li>
+          </ul>
+        </article>
+      </div>
 
       <!-- ===================== Financial operations ===================== -->
       <div class="section-head" style="margin-top: clamp(3rem, 6vw, 4.5rem);">
-        <p class="eyebrow">06 — Financial Operations</p>
+        <p class="eyebrow">08 — Financial Operations</p>
         <h2>Bank statements, matched to tenders on evidence</h2>
         <p class="lede">Statements are imported, cleaned of overlap, and compared against tenders
           using identifiers first and amounts second — because a round EMD figure matches every
@@ -494,10 +594,32 @@
           <span class="card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
           </span>
-          <h3>Interface</h3>
+          <h3>Interface and keyboard</h3>
           <p>Light and dark themes that persist across restarts, a sidebar you can collapse and
-            reorder to match how you work, and right-click actions available directly on grid
-            rows.</p>
+            reorder, right-click actions on grid rows, and keyboard shortcuts for every screen and
+            action that you can change in Configuration — F1 lists them.</p>
+        </article>
+
+        <article class="card card--hover reveal reveal-d2">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M8 11l4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          </span>
+          <h3>Setup and updates</h3>
+          <p>A single Setup file installs the application with its own .NET runtime and everything
+            else it needs. Run a newer Setup and it updates in place — after a verified, dated
+            backup of your database, templates, files and browser profiles — and keeps the previous
+            version until the next update succeeds. Bundled data is only brought in when you choose
+            it, category by category.</p>
+        </article>
+
+        <article class="card card--hover reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          </span>
+          <h3>Reminders</h3>
+          <p>Reminder cards you define — approaching deadlines, EMD to make, results to check — show
+            in a bar when the application starts and on the Tender Calendar, along with a nudge when
+            the last scraper import is getting old and when a company document is about to expire.</p>
         </article>
 
         <article class="card card--hover reveal reveal-d2">
