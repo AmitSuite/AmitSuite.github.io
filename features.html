@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Features — Amit Automation Suite</title>
-<meta name="description" content="Module by module: CPPP tender search, AI-assisted NIT reading, tender management, document generation, EMD tracking, portal submission assistance, tender status and reports, financial reconciliation, and setup with backed-up updates.">
+<meta name="description" content="All 27 modules: CPPP search, AI-assisted NIT reading, tender management, documents, EMD, bid submission help, tender status, reports and bank reconciliation.">
 <meta name="author" content="Amit Jain">
 <meta name="theme-color" content="#1F4E79">
 <link rel="canonical" href="https://amitsuite.github.io/features.html">
@@ -77,9 +77,9 @@
         </ol>
         <p class="eyebrow eyebrow--light">Features</p>
         <h1>Every stage of a tender, handled in one place</h1>
-        <p class="lede">Amit Automation Suite is organised into modules that share a single database,
+        <p class="lede">Amit Automation Suite is organised into 27 modules that share a single database,
           a single set of master lists and a consistent interface. Below is what each module does
-          today — and the one screen that is still a placeholder.</p>
+          today.</p>
       </div>
     </div>
   </section>
@@ -106,6 +106,7 @@
             press Search yourself; the scraper then reads the paginated result table and opens each
             detail page to extract its fields.</p>
           <ul class="card__list">
+            <li>Runs in three stages: check-in and run history, search criteria from a saved profile, then the live run</li>
             <li>Search profiles stored in the database and reused run to run</li>
             <li>Organisation, tender type, value criteria and date conditions all configurable</li>
             <li>Detail pages read label by label, then mapped onto tender fields</li>
@@ -124,6 +125,10 @@
             return the same answer for the same criteria.</p>
           <ul class="card__list">
             <li>Free-text search across registered tender fields</li>
+            <li>One search box, opened with Ctrl+K</li>
+            <li>Twelve quick status filters, including draw done or upcoming, EMD made or not made, refund pending or received, submitted, result awaited, won, cancelled or retender, and in Workspace</li>
+            <li>More filters for result, submission, EMD, draw, portal status, analysis and location</li>
+            <li>Include archived tenders, show results in their own window, and right-click to go to the tender</li>
             <li>Saved search cards with keywords, date windows and conditions</li>
             <li>Live result count on each card</li>
             <li>Per-column filters and multi-sort in every grid</li>
@@ -148,6 +153,13 @@
           <p>The Workspace queues the tenders you are working on and shows each one's next step —
             read the NIT, download, generate, pay, submit. The Tender Calendar lays every stored
             date out by month with reminders you can act on, and jumps straight to the tender.</p>
+          <ul class="card__list">
+            <li>Workspace: six step cards for the selected tender — documents downloaded, NIT analysed, documents generated, EMD paid, submitted, result — each opening the screen for that step</li>
+            <li>Workspace: read the NIT with AI, open the portal packet, mark a tender submitted and save its result</li>
+            <li>Calendar: Month, Week, Day and Agenda views over stored tender dates, with filters</li>
+            <li>Calendar: choose which tender fields appear on a card, open a card in place, expand to full screen or go to the tender</li>
+            <li>Reminders and upcoming deadlines beside the calendar</li>
+          </ul>
         </article>
 
         <article class="card reveal reveal-d1">
@@ -158,16 +170,26 @@
           <p>Pick a workbook, pick a worksheet, and map its column headers onto tender fields. Known
             headers are suggested automatically, so a recurring import format only has to be mapped
             once.</p>
+          <ul class="card__list">
+            <li>Six steps: File &amp; Worksheet, Select Columns, Map, Preview, Summary and Results</li>
+            <li>Import presets</li>
+            <li>Download a blank template, with an AI prompt for converting an old register</li>
+            <li>Update the application from a filled template, with a per-row preview, conflict handling and a recommendation for each field</li>
+          </ul>
         </article>
 
         <article class="card reveal reveal-d1">
           <span class="card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2.4"/></svg>
           </span>
-          <h3>Stages, promotion and archive</h3>
+          <h3>Stages and promotion</h3>
           <p>A tender sits in Tender Analysis while it is being assessed and is promoted to Master
-            Data once its EMD payment has succeeded. One rule decides that promotion. Tenders that
-            close with no work done on them are archived automatically and can be restored.</p>
+            Data once its EMD payment has succeeded. One rule decides that promotion.</p>
+          <ul class="card__list">
+            <li>Tender Analysis holds the imported tender list; columns can be shown, hidden, reordered, resized and frozen, and the layout is remembered</li>
+            <li>Per-column filters and click-sort, rows highlighted by your own rules, and a full-screen grid</li>
+            <li>Master Data holds promoted tenders in two tabs, Master Data and Submitted, each with its own counts</li>
+          </ul>
         </article>
 
         <article class="card reveal reveal-d2">
@@ -207,6 +229,48 @@
           <p>Total, today's, upcoming and overdue tender counts; EMD committed, refund pending,
             refunded and held balances; plus zone-wise and stage-wise breakdowns and recent
             activity.</p>
+          <ul class="card__list">
+            <li>Zone-wise and division-wise EMD summaries</li>
+            <li>A stage-wise summary and recent tenders</li>
+            <li>Click any figure to drill into the list behind it</li>
+            <li>Choose which widgets and columns show</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9M10 13h4"/></svg>
+          </span>
+          <h3>Archived Tenders</h3>
+          <p>Tenders that close with no work done on them are archived automatically, and any tender
+            can also be archived by hand. Archiving carries a note, and an archived tender can be
+            restored.</p>
+          <ul class="card__list">
+            <li>Restore an archived tender, open its detail or delete it</li>
+            <li>Archive automatically by your own rule or by hand, with a note</li>
+          </ul>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16 15h2"/></svg>
+          </span>
+          <h3>Salary Register</h3>
+          <p>A register of employee salary records.</p>
+          <ul class="card__list">
+            <li>Settings for how salaries are calculated</li>
+          </ul>
+        </article>
+
+        <article class="card reveal reveal-d2">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+          </span>
+          <h3>Stamp Paper Register</h3>
+          <p>A register of stamp paper stock and its usage.</p>
+          <ul class="card__list">
+            <li>Records what each sheet of stamp paper was used for</li>
+          </ul>
         </article>
       </div>
 
@@ -234,6 +298,9 @@
             <li>Never fills a CAPTCHA and never clicks Login, Search or Submit behind one</li>
             <li>Pause, resume and stop at any point during a run</li>
             <li>Credentials never appear in logs, screenshots or error text</li>
+            <li>Status chips and the EMD grid, with an Unmatched action that reads the inbox</li>
+            <li>The EMD Execution window signs in to IFMIS, fills the EMD form and assists through the payment gateway and net banking</li>
+            <li>The receipt PDF is captured and the result written back to the tender</li>
           </ul>
         </article>
 
@@ -258,10 +325,11 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></svg>
         <div>
           <p class="mb-0"><strong>EMD Management</strong> lists every tender's EMD in one place —
-            required amount, payment, status, transaction, making date and bank, refund — with the
-            same search, filters and right-click actions as the tender grids. <strong>The dedicated
-            EMD Refund screen is still a placeholder</strong>; refund matching works through the
-            Financial Operations module described below.</p>
+            required amount, payment, status, transaction, making date and bank, refund — with a
+            summary line and the same search, filters and right-click actions as the tender grids.
+            <strong>EMD Refund</strong> holds the refund records and tracks refunds still pending;
+            matching a refund to a bank credit is done in the Bank Statement Analyser, described
+            below.</p>
         </div>
       </div>
 
@@ -300,6 +368,11 @@
           <h3>Batch wizard</h3>
           <p>Generate across many tenders and many templates in one run. Each tender-and-template
             combination reports its own status, so a single missing value does not stop the batch.</p>
+          <ul class="card__list">
+            <li>Two steps: Select Tenders, then Review &amp; Generate</li>
+            <li>Generation runs in the background and can be stopped</li>
+            <li>Affidavits and undertakings built from the NIT's own wording</li>
+          </ul>
         </article>
 
         <article class="card reveal">
@@ -320,6 +393,12 @@
           <p>Downloads a tender's ZIP and PDF documents from the portal through your own browser,
             moves them into the tender's folder and records the path on the record. It checks first
             whether the documents are already held or the tender has closed.</p>
+          <ul class="card__list">
+            <li>Three steps: Select, Queue &amp; Download, Done</li>
+            <li>Unzips the downloads and files them in the tender's folder</li>
+            <li>Asks once when a tender's documents are already downloaded</li>
+            <li>Pauses for the CAPTCHA and resumes</li>
+          </ul>
         </article>
 
         <article class="card reveal reveal-d2">
@@ -329,6 +408,18 @@
           <h3>Company and bank details</h3>
           <p>Company master data and bank accounts are held once and feed both the documents and the
             reconciliation side, so a change of address or account is made in exactly one place.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg>
+          </span>
+          <h3>GST Invoices</h3>
+          <p>An invoice register and invoice generation.</p>
+          <ul class="card__list">
+            <li>Create a new invoice, numbered in sequence</li>
+            <li>Edit an invoice without losing its number</li>
+          </ul>
         </article>
       </div>
 
@@ -357,6 +448,10 @@
             <li>Requirements carry their page and section, so each one can be verified</li>
             <li>Only the NIT's Technical / Price Bid list counts as the upload list</li>
             <li>Sign in to Gemini once in that browser; the application never sees your Google password</li>
+            <li>Two steps: select tenders, then queue and read</li>
+            <li>The packet opens in tabs: Bid packet (technical and financial), Rates and Other documents</li>
+            <li>A status per document, and the file a document uses can be changed</li>
+            <li>Packet data can be updated from the portal</li>
           </ul>
         </article>
 
@@ -382,8 +477,7 @@
         <p class="eyebrow">06 — Tender Submission Helper</p>
         <h2>The upload run, one planned step at a time</h2>
         <p class="lede">The helper prepares the portal session and takes responsibility for the
-          uploads. Everything that commits the bid — the digital signature, Freeze, Submit — stays
-          with you.</p>
+          uploads. Freeze and the final submission stay with you.</p>
       </div>
 
       <article class="card reveal">
@@ -397,14 +491,19 @@
           plan itself is shown before the run starts. Evidence of what was uploaded where is kept in
           the tender's folder.</p>
         <ul class="card__list">
+          <li>A tender list, then eight tabs: Overview, Requirements, Affidavits, Documents, EMD, Rates, Portal and Final check</li>
+          <li>A seventeen-step portal plan, switched on step by step</li>
+          <li>Cover and slot planning</li>
+          <li>The bid acknowledgement is captured and written back to the tender</li>
           <li>Portal user ID and password held encrypted with Windows DPAPI, masked in the interface
             and filled only on a verified portal sign-in page</li>
           <li>Every slot shows the matched document and the reason; a second pass fills what the
             first could not</li>
-          <li>The EMD payment form is filled from your IFMIS receipt and the portal's upload utility is
-            filled row by row — you check both before anything is signed</li>
+          <li>The EMD payment form is filled from your IFMIS receipt and the portal's Java upload
+            utility is filled row by row. In that utility the helper can press Sign &amp; Upload; a
+            fill-only option stops before it</li>
           <li>DSC token sign-in is assisted: the token PIN is stored encrypted and typed only if you
-            switch that on, once, never retried. CAPTCHA, Freeze and the final Submit are never
+            switch that on and have saved it, once, never retried. CAPTCHA, Freeze and the final Submit are never
             automated</li>
           <li>The BOQ and the bid itself stay with the operator</li>
         </ul>
@@ -412,7 +511,7 @@
 
       <!-- ===================== Tender Status & Reports ===================== -->
       <div class="section-head" style="margin-top: clamp(3rem, 6vw, 4.5rem);">
-        <p class="eyebrow">07 — Tender Status and Reports</p>
+        <p class="eyebrow">07 — Tender Status, Reports and After award</p>
         <h2>Who won, at what rate — and how you are doing</h2>
         <p class="lede">Once a tender closes, the portal has the answer. The suite fetches it, reads
           the BOQ comparative chart and keeps the result on the record, so reports come from your
@@ -425,28 +524,67 @@
             <h3>Tender Status</h3>
             <span class="tag tag--live">Available</span>
           </div>
-          <p>Two routes: signed in, for the tenders you bid on; or the portal's public status
-            search, for any closed tender. Checks are grouped by division so you type one CAPTCHA
-            per division — the application never presses that Search for you.</p>
+          <p>Three routes: signed in, for the tenders you bid on; the portal's public status
+            search, for any closed tender; or division-wise, where checks are grouped by division
+            so you type one CAPTCHA per division — the application never presses that Search for
+            you.</p>
           <ul class="card__list">
             <li>L1 company, rate and amount read from the BOQ comparative chart</li>
             <li>Ties recorded as a lucky draw, with draw date and award editable</li>
             <li>Status files saved in the tender's folder; the chart opens from the grid</li>
             <li>Missing department chain and publish date filled from the saved tender link, never guessed</li>
+            <li>Three steps: Select (Our bids or Not bid), Queue &amp; Check, Done</li>
+            <li>The bidder list is read from the same chart</li>
+            <li>Results are interpreted without ever silently overwriting a final one</li>
           </ul>
         </article>
 
         <article class="card reveal reveal-d1">
           <div class="card__head">
-            <h3>Reports</h3>
+            <h3>Tender Reports</h3>
             <span class="tag tag--live">Available</span>
           </div>
           <p>A result store built from the saved charts: participation, outcome, your rank, L1 and
             the estimate. Reports open on screen, print to PDF and export to Excel with charts.</p>
           <ul class="card__list">
+            <li>Filter by period, date basis, division, category, result stage and value</li>
+            <li>Eight summary cards and five tabs: overview charts, division and category, bid
+              comparison, tie tenders and data quality</li>
             <li>Dense portal ranks, estimate-mismatch rule, per-tender detail</li>
-            <li>Tender detail, BOQ chart and technical summary one click away</li>
+            <li>A shared tender grid with a detail panel; open the BOQ chart, the technical summary or the tender folder</li>
+            <li>Result files can be re-read</li>
             <li>Viewing a report never changes a record</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__head">
+            <h3>Bid History Sync</h3>
+            <span class="tag tag--live">Available</span>
+          </div>
+          <p>Reads the portal's own bid list and tender-status list and fills empty fields on your
+            tender records. It fills only fields that are empty — a value you already hold is never
+            overwritten.</p>
+          <ul class="card__list">
+            <li>Options for creating missing tenders and for how much detail to read</li>
+            <li>A preview-only run</li>
+            <li>Start a run, stop after the current row, or finish</li>
+            <li>A summary card and a results grid</li>
+          </ul>
+        </article>
+
+        <article class="card reveal reveal-d1">
+          <div class="card__head">
+            <h3>After award</h3>
+            <span class="tag tag--live">Available</span>
+          </div>
+          <p>Covers what follows a win: the performance and advance guarantee (FDR) amounts, reading
+            of the bank's FDR advice, and guarantee letters.</p>
+          <ul class="card__list">
+            <li>Performance and advance guarantee (FDR) amounts held per tender</li>
+            <li>Read the after-award terms from the NIT with AI</li>
+            <li>Read the bank's FDR advice from its PDF</li>
+            <li>Generate the guarantee letter</li>
           </ul>
         </article>
       </div>
@@ -455,9 +593,9 @@
       <div class="section-head" style="margin-top: clamp(3rem, 6vw, 4.5rem);">
         <p class="eyebrow">08 — Financial Operations</p>
         <h2>Bank statements, matched to tenders on evidence</h2>
-        <p class="lede">Statements are imported, cleaned of overlap, and compared against tenders
-          using identifiers first and amounts second — because a round EMD figure matches every
-          same-value transfer in an operating account.</p>
+        <p class="lede">The Bank Statement Analyser imports statements, cleans them of overlap and
+          compares them against tenders using identifiers first and amounts second — because a
+          round EMD figure matches every same-value transfer in an operating account.</p>
       </div>
 
       <div class="grid grid--2">
@@ -490,7 +628,10 @@
             <li>A refund must carry a reliable identifier before it can be proposed</li>
             <li>A refund dated before its payment is rejected outright</li>
             <li>Bank charges are reported alongside the EMD, never merged into it</li>
-            <li>Proposals are marked for review; a link exists only once confirmed</li>
+            <li>Proposals go to a review queue; a link exists only once confirmed</li>
+            <li>All, EMDs and Others views of the transactions</li>
+            <li>A flagged row shows why it was flagged, with ranked tender suggestions</li>
+            <li>Confirm a match, choose or find a tender, mark the row Not an EMD payment, or keep it</li>
           </ul>
         </article>
       </div>
@@ -544,6 +685,8 @@
             <li>English and Hindi / Devanagari, including mixed-script pages</li>
             <li>Digits in any script normalised before a parser sees them</li>
             <li>Nothing to install — both engines ship inside the application</li>
+            <li>Four tabs: EMD Receipts, Bank Statements, Review Queue and Parse History</li>
+            <li>On EMD Receipts: extracted values, suggested tenders, and applying to the tender field by field</li>
           </ul>
         </article>
 
@@ -560,6 +703,11 @@
             <li>Only tenders you opt in are ever sent</li>
             <li>One-way: the calendar never writes back into your records</li>
             <li>Sign out at any time; the stored token is deleted</li>
+            <li>Connection health, and whether Google will notify you</li>
+            <li>A view of the next seven days</li>
+            <li>Sections for all events, event rules, which tenders are sending, sync history and a check against Google</li>
+            <li>Sync now, send a test notification and choose how Google notifies you</li>
+            <li>Reopen the setup wizard to reconfigure</li>
           </ul>
         </article>
 
@@ -577,6 +725,10 @@
             <li>Settings grouped by area, each with its own defaults</li>
             <li>A field registry that discovers candidate fields rather than listing them</li>
             <li>Administrator-only screens behind a password, unlocked once per session</li>
+            <li>General settings: company, theme, folders, document generation, templates, placeholders and document names</li>
+            <li>Admin settings: company and bank accounts, portal and token sign-ins, import, column defaults, business rules, master lists, automation engines, search and reminders</li>
+            <li>Highlighting rules for rows and fields</li>
+            <li>Go back, lock Admin and save from the settings footer</li>
           </ul>
         </article>
 
@@ -629,6 +781,23 @@
           <h3>Audit log</h3>
           <p>Changes applied through the automated paths are recorded with the field, the value and
             the decision taken — including fields an operator was offered and chose not to apply.</p>
+        </article>
+
+        <article class="card card--hover reveal reveal-d2">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11M15 9v11"/></svg>
+          </span>
+          <h3>Shared across every screen</h3>
+          <p>Controls that are not tied to a single module.</p>
+          <ul class="card__list">
+            <li>Right-click a tender in any grid to open its detail, portal link or folder, or to copy its ID</li>
+            <li>From the same menu: add to the download queue, read in the Reader, check tender status, generate documents, generate EMD</li>
+            <li>Also from the menu: move to Master, add to or remove from the Workspace, archive and delete</li>
+            <li>Back and Forward in the header</li>
+            <li>Ctrl+K for search, F1 for the shortcut list</li>
+            <li>Full-screen grids</li>
+            <li>A Live Progress window pops out of any long-running screen</li>
+          </ul>
         </article>
       </div>
     </div>

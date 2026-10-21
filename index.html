@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Amit Automation Suite — Tender Management &amp; Automation for Windows</title>
-<meta name="description" content="Windows desktop platform for the government tender lifecycle: CPPP tender search, AI-assisted NIT reading, tender management, document generation, EMD tracking, portal submission assistance, tender status, reports and bank reconciliation.">
+<meta name="description" content="Windows desktop platform for government tenders: CPPP search, AI NIT reading, documents, EMD, bid submission help, tender status, reports and bank reconciliation.">
 <meta name="author" content="Amit Jain">
 <meta name="theme-color" content="#1F4E79">
 <link rel="canonical" href="https://amitsuite.github.io/">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Amit Automation Suite">
 <meta property="og:title" content="Amit Automation Suite — Tender Management &amp; Automation for Windows">
-<meta property="og:description" content="A Windows desktop platform for the government tender lifecycle: search, NIT reading, management, documents, EMD, submission assistance, tender status, reports and bank reconciliation. Data stays on your machine.">
+<meta property="og:description" content="A Windows desktop platform for the government tender lifecycle, from CPPP search and NIT reading to EMD, bid submission help and reports. Data stays on your machine.">
 <meta property="og:url" content="https://amitsuite.github.io/">
 <meta property="og:image" content="https://amitsuite.github.io/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -39,7 +39,7 @@
   "applicationCategory": "BusinessApplication",
   "applicationSubCategory": "Tender Management",
   "operatingSystem": "Windows 10 version 2004 (build 19041) or later, 64-bit",
-  "softwareVersion": "1.0.2",
+  "softwareVersion": "1.0.3",
   "url": "https://amitsuite.github.io/",
   "image": "https://amitsuite.github.io/assets/img/og-image.png",
   "description": "A Windows desktop platform that manages the government tender lifecycle end to end: CPPP tender search, AI-assisted NIT reading, tender management, document generation, EMD tracking, portal submission assistance, tender status, reports and financial reconciliation. All records are stored in a local SQLite database on the operator's own machine.",
@@ -90,7 +90,7 @@
     <div class="wrap">
       <div class="hero__inner">
         <div>
-          <p class="hero__badge"><b>Version 1.0.2</b> Windows desktop application</p>
+          <p class="hero__badge"><b>Version 1.0.3</b> Windows desktop application</p>
           <h1>Smarter Tenders.<br>Easier Management.</h1>
           <p class="lede">Amit Automation Suite brings the complete government tender lifecycle into one
             Windows application — searching the portal, reading the NIT, managing tender records,
@@ -185,7 +185,7 @@
       <div class="section-head section-head--center">
         <p class="eyebrow">One platform</p>
         <h2>Nine areas of the tender lifecycle, in a single application</h2>
-        <p class="lede">Every module shares one database, one set of master lists and one interface.
+        <p class="lede">All 27 modules share one database, one set of master lists and one interface.
           A tender found by the scraper is the same record the Reader, the document engine, the EMD
           screens, the Submission Helper and the reports all read.</p>
       </div>
@@ -218,7 +218,8 @@
           <ul class="card__list">
             <li>Show, hide, reorder, resize, filter and freeze columns — layout persists</li>
             <li>Category, row-highlight, days-left and reminder rules you configure</li>
-            <li>Tenders with no work are archived automatically and can be restored</li>
+            <li>Archived Tenders: automatic and manual archiving, with notes and restore</li>
+            <li>Salary Register and Stamp Paper Register hold salary records and stamp paper stock</li>
           </ul>
         </article>
 
@@ -231,7 +232,7 @@
             the documents to upload, the rates and the other conditions come back as a checklist
             on the tender, with the page each item was found on.</p>
           <ul class="card__list">
-            <li>You press Send in Gemini yourself — nothing is sent for you</li>
+            <li>Starting an analysis sends it; you can switch that off and press Send yourself</li>
             <li>Each requirement is matched to your named company documents</li>
             <li>Cover list read from the public tender page for the upload</li>
           </ul>
@@ -249,6 +250,7 @@
             <li>Batch generation across many tenders and templates at once</li>
             <li>Pre-flight check marks each tag Resolved, Missing or Unregistered</li>
             <li>Template Builder, naming patterns and optional PDF output</li>
+            <li>GST Invoices: invoice register and generation</li>
           </ul>
         </article>
 
@@ -293,7 +295,8 @@
           <ul class="card__list">
             <li>Signed-in or public check — one CAPTCHA per division, typed by you</li>
             <li>L1 company, rate and amount; ties recorded as a lucky draw</li>
-            <li>Result reports with charts, exported to Excel or PDF</li>
+            <li>Tender Reports: filters by period, division, category and result, eight summary cards and five tabs, exported to Excel or PDF</li>
+            <li>Bid History Sync fills empty fields from the portal's own bid and tender-status lists</li>
           </ul>
         </article>
 
@@ -302,13 +305,14 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6"/><path d="M5 10v9M19 10v9M9 10v9M15 10v9M3 20h18"/></svg>
           </span>
           <h3>Financial Operations</h3>
-          <p>Import bank statements from several banks and accounts, remove overlapping duplicates at
-            transaction level, and match debits and credits to the tenders they belong to on
-            identifier-first evidence.</p>
+          <p>The Bank Statement Analyser imports statements from several banks and accounts, removes
+            overlapping duplicates at transaction level, and matches debits and credits to the
+            tenders they belong to on identifier-first evidence.</p>
           <ul class="card__list">
             <li>Password-protected statements supported, passwords never stored in plain text</li>
             <li>Gateway charges reported separately, never merged into an EMD amount</li>
             <li>Excel export with summary, transaction, reconciliation and exception sheets</li>
+            <li>After award covers performance and advance guarantee (FDR) amounts, the bank's FDR advice and guarantee letters</li>
           </ul>
         </article>
 
@@ -386,9 +390,9 @@
         <h2>Your data stays on your machine</h2>
         <p class="lede" style="max-width: 62ch;">Amit Automation Suite has no product server and no
           online account. It runs entirely on the operator's own Windows PC, and the automation is
-          built to assist a person rather than replace them. Data leaves the PC only when you send
-          it yourself — to the portal in your browser, to Google Calendar if you switch it on, or
-          to Gemini when you press Send.</p>
+          built to assist a person rather than replace them. Data leaves the PC only where you
+          direct it — to the portal in your browser, to Google Calendar if you switch it on, or to
+          Gemini when you run an NIT analysis.</p>
 
         <div class="panel__grid">
           <div class="panel__item">
@@ -412,9 +416,12 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V6.5a1.5 1.5 0 0 1 3 0V11"/><path d="M12 11V5.5a1.5 1.5 0 0 1 3 0V11"/><path d="M15 11V7.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-1a6 6 0 0 1-6-6v-3a1.5 1.5 0 0 1 3 0"/></svg>
             <div>
               <h3>The operator stays in control</h3>
-              <p>The automation never fills or bypasses a CAPTCHA and never handles an OTP or a
-                digital signature. The browser is yours — it opens only when you press Start and is
-                never closed for you.</p>
+              <p>The automation never fills or bypasses a CAPTCHA, never handles a one-time
+                password, and Freeze and the final submission stay with you. It types the DSC
+                token PIN only if you switch that on and
+                have saved the PIN, and in the portal's Java upload utility it can press Sign &amp;
+                Upload — a fill-only option stops before it. The browser is yours — it opens only
+                when you press Start and is never closed for you.</p>
             </div>
           </div>
           <div class="panel__item">

@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /404.html
+Disallow: /odd/
 
 Sitemap: https://amitsuite.github.io/sitemap.xml

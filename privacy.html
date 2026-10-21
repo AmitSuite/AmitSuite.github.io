@@ -89,7 +89,7 @@
 
       <ul class="meta-line">
         <li><b>Effective date:</b> 27 August 2026</li>
-        <li><b>Last updated:</b> 18 September 2026</li>
+        <li><b>Last updated:</b> 22 October 2026</li>
         <li><b>Applies to:</b> Amit Automation Suite (desktop application) and this website</li>
       </ul>
 
@@ -104,7 +104,7 @@
             Google Calendar, and only if you switch it on and sign in. That connection is one-way:
             the suite writes tender dates to a calendar you choose, and never reads your calendar
             back into your records. The Reader can also open Google Gemini in your browser with a
-            tender document attached — but only you press Send (see
+            tender document attached, and send it for analysis (see
             <a href="#gemini">section 7.1</a>). <strong>Your data is never sold, rented, or used for
             advertising or profiling.</strong></p>
         </div>
@@ -358,9 +358,11 @@
             closes it for you.</li>
           <li>The automation <strong>never fills or attempts to bypass a CAPTCHA</strong>, and never
             clicks Login, Search or Submit behind one.</li>
-          <li>It <strong>never handles one-time passwords.</strong> The PIN of your digital-signature
-            token is typed by the application only if you switch that option on in the
-            administrator settings; it is then used once per sign-in and never retried.</li>
+          <li>It <strong>types the PIN of your digital-signature token only if you allow it.</strong>
+            The PIN is typed by the application only if you switch that option on in the
+            administrator settings and have saved the PIN; it is then used once per sign-in and
+            never retried. Inside the portal's Java upload utility the application can press Sign
+            &amp; Upload; a fill-only option stops before that button.</li>
           <li>Where portal credentials or the token PIN are stored for autofill, they are held
             encrypted (see <a href="#secrets">section 9</a>), masked in the interface, and are never
             written to logs, screenshots or error messages.</li>
@@ -372,10 +374,12 @@
         <h3 id="gemini">7.1 Google Gemini in the Reader</h3>
         <p>The Reader can analyse a tender's NIT with Google Gemini. When you choose this, the
           application opens <em>gemini.google.com</em> in a separate Chrome profile it keeps for
-          the purpose, attaches the tender document you chose and fills in a prompt. <strong>It
-          never presses Send.</strong> Whether that document and prompt reach Google is your
-          decision on every occasion, and the reply is read back into the application only after
-          it is checked against the tender's NIT number.</p>
+          the purpose, attaches the tender document you chose and fills in a prompt. <strong>By
+          default it then presses Send for you</strong>, so the document and prompt reach Google
+          as soon as you start the analysis. You can turn that off in the application's Gemini
+          settings, after which Send is yours to press on every occasion. Either way the reply is
+          read back into the application only after it is checked against the tender's NIT
+          number.</p>
         <ul>
           <li>What is sent is the tender document (a public procurement notice) and the prompt —
             never your company details, bank details, passwords or records.</li>
@@ -481,8 +485,8 @@
           <li><strong>Google Calendar</strong> — only the calendar event content described in
             section 5.4, and only for tenders you opted in, and only while the integration is
             enabled.</li>
-          <li><strong>Google Gemini</strong> — only the tender document and prompt you yourself send
-            from the Reader, as described in section 7.1.</li>
+          <li><strong>Google Gemini</strong> — only the tender document and the prompt, when you run
+            an NIT analysis from the Reader, as described in section 7.1.</li>
           <li><strong>Procurement portals and banks</strong> — only through your own browser, in the
             course of work you initiate, exactly as if you had typed it yourself.</li>
           <li><strong>Support correspondence</strong> — anything you choose to send us directly.</li>
@@ -517,8 +521,8 @@
             file.</li>
           <li><strong>Withdraw consent for Google Calendar.</strong> Sign out in the application, or
             revoke access in your Google account, at any time.</li>
-          <li><strong>Stop using Gemini.</strong> Simply do not press Send; sign out of Gemini in the
-            application's browser profile to remove the session.</li>
+          <li><strong>Stop using Gemini.</strong> Simply do not run an NIT analysis; sign out of
+            Gemini in the application's browser profile to remove the session.</li>
           <li><strong>Complain or ask questions.</strong> Write to
             <a href="mailto:123amitjain@gmail.com">123amitjain@gmail.com</a>.</li>
         </ul>

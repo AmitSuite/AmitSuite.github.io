@@ -188,13 +188,26 @@ layer, `AboutWindow.xaml`, `AmitAutomationSuite.csproj` and the SRS. No
 certification, customer, revenue, accreditation or capability is claimed that
 does not exist.
 
-- As of 18-09-2026 every module on the site is shipped (Submission Helper,
-  Reader with Gemini, Tender Status, Reports, EMD Management included). The one
-  remaining **placeholder in the shipped app** is EMD Refund; it is named as such
-  and never presented as a delivered feature.
-- Claims about automation limits are exact: CAPTCHA, OTP, Freeze and Submit are
-  never automated; the DSC token PIN is typed only behind an opt-in switch,
-  once; Gemini's Send is never pressed by the application.
+- As of 22-10-2026 all **27 modules** on the site are shipped screens; none is a
+  placeholder. The module list comes from `MainWindow.xaml.cs`
+  (`_viewFactory` / `_titles` / `DefaultNav`) in the AAS repo — check it there,
+  not against `AAS_STATUS_SNAPSHOT.md`, which contradicts itself in places
+  (§3.15 still lists the calendar rule editor and EMD Refund as not built; both
+  exist as real views). §12 A.0 of that file warns of exactly this.
+- Claims about automation limits are exact, and two of them changed on
+  29-09-2026 — re-check these against the source before editing them:
+  - CAPTCHA, one-time passwords, Freeze and the final submission are **never**
+    automated. Still true.
+  - The DSC token PIN **is** typed when the operator switches that on and has
+    saved the PIN (`DscAutoLogin`).
+  - Inside the portal's Java upload utility the application **can press
+    Sign & Upload**; a fill-only option stops before it.
+  - **Gemini's Send IS pressed by the application** by default
+    (`Gemini/PressSend`, owner's decision 29-09-2026). An earlier version of
+    this site said the opposite in the Privacy Policy; do not reintroduce it.
+- Version shown on the site must match the installed build
+  (`C:\Program Files\AAS\AmitAutomationSuite.exe` → ProductVersion), currently
+  **1.0.3**. The csproj still says 1.0.0 and is not the source of truth.
 - Figures in the hero illustration are **examples**, and are captioned as such.
 
 If a module ships, update `features.html` (status tag) and `index.html` (card)

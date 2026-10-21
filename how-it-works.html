@@ -136,13 +136,14 @@
             <h3>Read the NIT with AI and build the document list</h3>
             <p>Open the tender in the Reader and choose a prompt — the documents to upload, the
               rates, or the other conditions. The Reader opens Google Gemini in a browser profile
-              kept for this purpose, attaches the NIT and fills the prompt. You press Send. The
+              kept for this purpose, attaches the NIT, fills the prompt and sends it. The
               reply comes back as a checklist on the tender, each item with the page it was found
               on, and each requirement is matched to one of your named company documents.</p>
             <div class="step__note">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
-              <span>Nothing is sent to Gemini until you press Send, and a reply is saved only after
-                it is checked against the tender's NIT number.</span>
+              <span>Only the NIT and the prompt go to Gemini, never your company or bank details,
+                and a reply is saved only after it is checked against the tender's NIT
+                number.</span>
             </div>
           </div>
         </div>
@@ -184,8 +185,8 @@
               in exactly the same state.</p>
             <div class="step__note">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-              <span>One-time passwords are never handled by the automation, and credentials never
-                appear in a log, a screenshot or an error message.</span>
+              <span>The automation never fills a CAPTCHA, and credentials never appear in a log, a
+                screenshot or an error message.</span>
             </div>
           </div>
         </div>
@@ -198,12 +199,14 @@
               shortlisting the tender, Proceed, terms, bidder details, the EMD payment form, the
               cover uploads — each switched off until you switch it on. The helper matches the
               portal's requested documents to your files slot by slot, shows what it matched and
-              why, and fills the portal's upload utility for you to sign. Evidence of the run is
-              kept in the tender's folder.</p>
+              why, and fills the portal's Java upload utility. Evidence of the run is kept in the
+              tender's folder, and the portal's acknowledgement of the bid is captured and written
+              back to the tender.</p>
             <div class="step__note">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 2.4 17.2A2 2 0 0 0 4.1 20h15.8a2 2 0 0 0 1.7-2.8L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
               <span>Freeze and the final Submit are never automated. The DSC token PIN is typed only
-                if you switch that on — once, never retried.</span>
+                if you switch that on and have saved it — once, never retried. In the Java upload
+                utility the helper can press Sign &amp; Upload; a fill-only option stops before it.</span>
             </div>
           </div>
         </div>
@@ -230,7 +233,7 @@
 
         <div class="step reveal">
           <div class="step__body">
-            <span class="step__module">Financial Operations</span>
+            <span class="step__module">Bank Statement Analyser</span>
             <h3>Reconcile against the bank</h3>
             <p>Import the bank statements — PDF or Excel, several banks, several accounts, including
               consolidated files that change account part-way through. Overlapping downloads are
@@ -251,14 +254,17 @@
 
         <div class="step reveal">
           <div class="step__body">
-            <span class="step__module">Tender Status &amp; Reports</span>
+            <span class="step__module">Tender Status, Tender Reports &amp; After award</span>
             <h3>Find out who won, and keep the record</h3>
             <p>Once a tender closes, Tender Status fetches the outcome — signed in for your own bids,
               or through the portal's public status search for any closed tender, one CAPTCHA per
               division typed by you. The BOQ comparative chart is read for the L1 company, rate and
               amount, ties are recorded as a lucky draw, and the files are filed in the tender's
-              folder. Reports then show participation, outcome and rank from your own data, on
-              screen, in Excel or as PDF.</p>
+              folder. Tender Reports then show participation, outcome and rank from your own
+              data, filtered by period, division, category and result, on screen, in Excel or as
+              PDF. Bid History Sync fills empty fields from the portal's own bid and tender-status
+              lists, and After award covers the performance and advance guarantee (FDR) amounts,
+              the bank's FDR advice and guarantee letters.</p>
           </div>
         </div>
 
@@ -304,9 +310,11 @@
           <span class="card__icon card__icon--gold" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 5.1A9 9 0 0 1 21 12c-.5 1-1.2 2-2 2.8M6.3 6.4A9 9 0 0 0 3 12a9 9 0 0 0 13 7"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
           </span>
-          <h3>Human checkpoints stay human</h3>
-          <p>CAPTCHA, one-time passwords, Freeze and the final submission are never automated, in
-            any module. Sending a prompt to Gemini is your click, not the application's.</p>
+          <h3>Key checkpoints stay with you</h3>
+          <p>CAPTCHA, Freeze and the final submission are never automated, in any module. The
+            token PIN is typed only if you switch that on, and in the portal's Java upload utility
+            Sign &amp; Upload can be pressed — a fill-only option stops before it. One-time
+            passwords are never handled at all.</p>
         </article>
 
         <article class="card reveal reveal-d2">
